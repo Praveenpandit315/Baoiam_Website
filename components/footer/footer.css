@@ -180,3 +180,14 @@ border:1px solid #444;
 color:#ddd;
 
 }
+div.left img{
+    width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    mix-blend-mode: multiply;
+}
+.logo-classname{
+    opacity: 1 !important;
+    filter: brightness(1 .2)
+}
