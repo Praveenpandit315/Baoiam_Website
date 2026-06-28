@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: white;
+  color: #222;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 8.2%;
+  gap: 70px;
+}
+
+.left {
+  width: 52%;
+  padding-top: 10px;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 28px;
+  display: block;
+}
+
+.description {
+  max-width: 670px;
+  font-size: 21px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #232323;
+  margin-bottom: 95px;
+}
+
+.callback h2 {
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.callback p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.form {
+  display: flex;
+  width: 420px;
+  height: 34px;
+}
+
+.form select {
+  width: 58px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  color: #555;
+  padding-left: 8px;
+  outline: none;
+  background: white;
+}
+
+.form input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 0 18px;
+  font-size: 12px;
+  outline: none;
+}
+
+.form button {
+  width: 115px;
+  border: none;
+  background: linear-gradient(90deg, #ffb347, #ff7a2f);
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.right {
+  width: 48%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.phone-image {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 6%;
+    gap: 40px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .description {
+    font-size: 17px;
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .right {
+    justify-content: center;
+  }
+
+  .phone-image {
+    width: 420px;
+  }
+}
