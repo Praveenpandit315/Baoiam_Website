@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baolam - Be One In A Million</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f5f2;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 0 56px;
+    height: 76px;
+    background: #fff;
+    box-shadow: 0 1px 0 #ede9e3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 48px;
+    text-decoration: none;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555;
+    margin-top: 1px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+    flex: 1;
+  }
+
+  .nav-links > li { position: relative; }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    transition: color .2s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: #f47b20; }
+
+  .nav-links .active {
+    color: #f47b20;
+    border-bottom: 2px solid #f47b20;
+    padding-bottom: 10px;
+    font-style:bold;
+    font-size: 19px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  .nav-links .res{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 15px;
+    font-style: bold;
+    padding-bottom: 10px;
+    font-style:bold;
+  }
+
+  .refer-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-login {
+    border: 1.5px solid #f47b20;
+    background: transparent;
+    color: #f47b20;
+    padding: 8px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-login:hover { background: #fff5ed; }
+
+  .btn-signup {
+    background: #f47b20;
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-signup:hover { background: #d96a10; }
+
+  /* ── KICKSTARTER DROPDOWN TRIGGER ── */
+  .ks-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    user-select: none;
+    padding: 15px 0;
+    transition: color .2s;
+    font-family: 'Poppins', sans-serif;
+  }
+  .ks-trigger:hover, .ks-trigger.open { color: #f47b20; }
+
+  .ks-trigger .chevron {
+    display: inline-block;
+    transition: transform .25s;
+    font-size: 11px;
+    margin-top: 1px;
+  }
+  .ks-trigger.open .chevron { transform: rotate(180deg); }
+
+  /* ── LEVEL-1 DROPDOWN ── */
+  .ks-dropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.14);
+    min-width: 240px;
+    padding: 8px 0;
+    display: none;
+    z-index: 999;
+    border: 1px solid #f0ebe4;
+  }
+  .ks-dropdown.open { display: block; animation: fadeSlide .2s ease; }
+
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* shared item style for both levels */
+  .dd-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 6px;
+    transition: background .15s, color .15s;
+    position: relative;
+    gap: 8px;
+  }
+  .dd-item:hover { background: #fff5ed; color: #f47b20; }
+  .dd-item.active-cat { background: #fff5ed; color: #f47b20; }
+
+  .dd-item .dd-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #f47b20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .dd-item .dd-label { flex: 1; }
+  .dd-item .dd-arrow {
+    font-size: 11px;
+    color: #999;
+    transition: transform .2s;
+  }
+  .dd-item.active-cat .dd-arrow { transform: rotate(90deg); color: #f47b20; }
+
+  /* ── LEVEL-2 SUBMENU (inline accordion) ── */
+  .sub-menu {
+    display: none;
+    background: #fdf9f5;
+    border-left: 3px solid #f47b20;
+    margin: 0 6px 2px 16px;
+    border-radius: 0 6px 6px 0;
+    overflow: hidden;
+  }
+  .sub-menu.open { display: block; animation: fadeSlide .18s ease; }
+
+  .sub-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+  }
+  .sub-item:hover { background: #ffeedd; color: #f47b20; }
+
+  .sub-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f47b20;
+    flex-shrink: 0;
+    opacity: .5;
+  }
+  .sub-item:hover .dot { opacity: 1; }
+
+  .dd-divider {
+    height: 1px;
+    background: #f0ebe4;
+    margin: 4px 12px;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a class="logo" href="#">
+    <div style="display:flex;align-items:flex-end;">
+     <img src="images/logo.jpeg" alt="logo" height="70px", width="100px">
+    </div>
+   
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+
+    <!-- KickStarter Courses with multi-level dropdown -->
+    <li id="ks-nav-item">
+      <div class="ks-trigger" id="ksTrigger">
+        KickStarter&nbsp;Courses
+        <span class="chevron">▾</span>
+      </div>
+
+      <div class="ks-dropdown" id="ksDropdown">
+
+        <!-- Category 1 -->
+        <div class="dd-item" data-cat="web">
+          <span class="dd-label">Success Fusion Program</span>
+          <span class="dd-arrow">></span>
+        </div>
+        <div class="sub-menu" id="sub-web">
+          <div class="sub-item"><span class="dot"></span>Digital Marketing</div>
+          <div class="sub-item"><span class="dot"></span>Data Science</div>
+          <div class="sub-item"><span class="dot"></span>Data Analysis</div>
+          <div class="sub-item"><span class="dot"></span>UI/UX</div>
+        </div>
+
+        <div class="dd-divider"></div>
+
+        <!-- Category 2 -->
+        <div class="dd-item" data-cat="data">
+          <span class="dd-label">Udaan 90</span>
+          <span class="dd-arrow">›</span>
+        </div>
+
+      </div>
+    </li>
+
+    <li><a href="#" class="res">Resources</a></li>
+    <li>
+      <a href="#" class="refer-link">
+        <span style="font-size:18px">🎁</span> Refer &amp; Earn
+      </a>
+    </li>
+    <li><a href="#" class="res" >Internships</a></li>
+    <li><a href="#" class="res" >About us</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-login">Login</button>
+    <button class="btn-signup">Sign Up</button>
+  </div>
+</nav>
+
+<script>
+  const trigger   = document.getElementById('ksTrigger');
+  const dropdown  = document.getElementById('ksDropdown');
+  const catItems  = document.querySelectorAll('.dd-item[data-cat]');
+
+  // Toggle main dropdown on click
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    trigger.classList.toggle('open', isOpen);
+    if (!isOpen) closeAllSubs();
+  });
+
+  // Toggle sub-menus on category click
+  catItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const cat    = item.dataset.cat;
+      const sub    = document.getElementById('sub-' + cat);
+      const isOpen = sub.classList.contains('open');
+
+      // close all other subs
+      closeAllSubs();
+
+      if (!isOpen) {
+        sub.classList.add('open');
+        item.classList.add('active-cat');
+      }
+    });
+  });
+
+  function closeAllSubs() {
+    document.querySelectorAll('.sub-menu').forEach(s => s.classList.remove('open'));
+    document.querySelectorAll('.dd-item.active-cat').forEach(i => i.classList.remove('active-cat'));
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+    trigger.classList.remove('open');
+    closeAllSubs();
+  });
+
+  // Prevent dropdown itself from closing when clicking inside
+  dropdown.addEventListener('click', e => e.stopPropagation());
+</script>
+
+</body>
+</html>
