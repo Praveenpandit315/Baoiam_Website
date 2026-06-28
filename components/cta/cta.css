@@ -1,13 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
 body {
-  background: white;
+  background: #ffffff;
   color: #222;
 }
 
@@ -17,39 +16,49 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 70px 8.2%;
+  padding: 55px 7%;
   gap: 70px;
 }
 
 .left {
   width: 52%;
-  padding-top: 10px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.callback {
+  width: 100%;
+  max-width: 700px;
+  margin-top: -8px;
 }
 
 .logo {
   width: 250px;
-  margin-bottom: 28px;
+  margin-bottom: 5px;
   display: block;
 }
 
 .description {
-  max-width: 670px;
-  font-size: 21px;
-  line-height: 1.45;
+  width: 100%;
+  max-width: 700px;
+  font-size: 23px;
+  line-height: 1.55;
   font-weight: 500;
-  color: #232323;
-  margin-bottom: 95px;
+  color: #222;
+  margin-bottom: 45px;
 }
 
 .callback h2 {
-  font-size: 27px;
+  font-size: 34px;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: #222;
 }
 
 .callback p {
-  font-size: 15px;
+  font-size: 17px;
   color: #555;
   margin-bottom: 18px;
 }
@@ -57,17 +66,17 @@ body {
 .form {
   display: flex;
   width: 420px;
-  height: 34px;
+  height: 33px;
 }
 
 .form select {
   width: 58px;
   border: 1px solid #ddd;
-  font-size: 12px;
+  background: white;
   color: #555;
+  font-size: 12px;
   padding-left: 8px;
   outline: none;
-  background: white;
 }
 
 .form input {
@@ -93,27 +102,50 @@ body {
 .right {
   width: 48%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
-.phone-image {
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-  display: block;
+.phone-wrap {
+  position: relative;
+  width: 450px;
+  height: 550px;
 }
 
-@media (max-width: 900px) {
+.phone {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.18));
+}
+
+.phone-back {
+  width: 245px;
+  left: 30px;
+  top: 10px;
+  z-index: 1;
+}
+
+.phone-front {
+  width: 240px;
+  right: 10px;
+  top: 115px;
+  z-index: 2;
+}
+
+@media (max-width: 950px) {
   .hero {
     flex-direction: column;
     padding: 40px 6%;
-    gap: 40px;
+    gap: 30px;
   }
 
   .left,
   .right {
     width: 100%;
+  }
+
+  .left {
+    padding-left: 0;
   }
 
   .description {
@@ -129,11 +161,19 @@ body {
     width: 100%;
   }
 
-  .right {
-    justify-content: center;
+  .phone-wrap {
+    width: 360px;
+    height: 470px;
   }
 
-  .phone-image {
-    width: 420px;
+  .phone-back {
+    width: 220px;
+    left: 5px;
+  }
+
+  .phone-front {
+    width: 215px;
+    right: 0;
+    top: 105px;
   }
 }
