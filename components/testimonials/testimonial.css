@@ -1,215 +1,249 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  overflow-x: hidden;
+body{
+    font-family:'Inter',sans-serif;
+    background:#fff;
+    overflow-x:hidden;
 }
 
-.testimonials {
-  width: 100%;
-  min-height: 100vh;
-  text-align: center;
-  padding-top: 40px;
+.testimonials{
+    width:100%;
+    min-height:100vh;
+    text-align:center;
+    padding-top:90px;
 }
 
-.testimonials h1 {
-  font-size: 44px;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 34px;
+.testimonials h1{
+    font-size:60px;
+    font-weight:900;
+    color:#000;
+    margin-bottom:35px;
 }
 
-.testimonials > p {
-  font-size: 21px;
-  color: #222;
-  margin-bottom: 90px;
+.testimonials>p{
+    font-size:28px;
+    color:#111;
+    margin-bottom:70px;
 }
 
-.slider {
-  width: 100%;
-  height: 340px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.testimonial-wrapper{
+    width:100%;
+    height:280px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.card {
-  background: #fff;
-  position: absolute;
-  text-align: left;
-  border-radius: 13px;
-  border: 1px solid rgba(255, 150, 70, 0.18);
+.card{
+    background:#fff;
+    position:absolute;
+    text-align:left;
+    border-radius:12px;
+    border:2px solid #ffe3cc;
+    box-shadow:
+        0 10px 24px rgba(255,122,28,.25),
+        0 0 10px rgba(255,151,65,.18);
+    transition:.5s;
 }
 
-.main {
-  width: 770px;
-  min-height: 330px;
-  padding: 27px 35px;
-  z-index: 10;
-  box-shadow:
-    0 17px 32px rgba(255, 126, 36, 0.30),
-    0 0 8px rgba(255, 126, 36, 0.18);
+/*------------------CENTER CARD------------------*/
+
+.main-card{
+    width:680px;
+    min-height:225px;
+    padding:24px 30px;
+    z-index:5;
 }
 
-.side {
-  width: 520px;
-  height: 245px;
-  padding: 32px 30px;
-  opacity: 0.9;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 8px 28px rgba(255, 126, 36, 0.22);
+/*----------------SIDE CARDS----------------*/
+
+.side-card{
+    width:340px;
+    height:145px;
+    padding:14px 18px;
+    z-index:1;
+    cursor:pointer;
 }
 
-.left {
-  left: -245px;
+.side-card .review{
+    margin-top:16px;
+    font-size:13px;
+    line-height:1.45;
+
+    height:55px;
+    overflow-y:auto;
 }
 
-.right {
-  right: -245px;
+.left-card{
+    left:90px;
 }
 
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 38px;
+.right-card{
+    right:90px;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+.side-card:hover{
+    transform:scale(1.04);
 }
 
-.profile img {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  border: 2px solid #d7c0aa;
-  padding: 3px;
-  object-fit: cover;
+/*----------------TOP----------------*/
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
 }
 
-h3 {
-  font-size: 29px;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 7px;
+.profile{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
-span {
-  display: block;
-  font-size: 25px;
-  color: #555;
-  font-weight: 400;
+.side-card .profile{
+    gap:12px;
 }
 
-.stars {
-  color: #f5a623;
-  font-size: 32px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  white-space: nowrap;
+/*----------------AVATAR----------------*/
+
+.avatar{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
-.big {
-  font-size: 37px;
+.side-card .avatar{
+    width:42px;
+    height:42px;
 }
 
-.review {
-  font-size: 22px;
-  line-height: 1.5;
-  color: #111;
+/*----------------TEXT----------------*/
+
+.name{
+    font-size:24px;
+    font-weight:800;
+    color:#000;
 }
 
-.main-review {
-  font-size: 27px;
-  line-height: 1.45;
-  max-width: 680px;
+.role{
+    font-size:18px;
+    color:#333;
+    margin-top:3px;
 }
 
-.side .stars {
-  margin-bottom: 14px;
+.review{
+    margin-top:18px;
+    font-size:18px;
+    line-height:1.45;
+    color:#222;
 }
 
-.side h3 {
-  font-size: 28px;
-  margin-bottom: 7px;
+/*-------------SIDE TEXT-------------*/
+
+.side-card .name{
+    font-size:15px;
+    font-weight:800;
 }
 
-.side span {
-  font-size: 23px;
-  margin-bottom: 30px;
+.side-card .role{
+    font-size:13px;
+    margin-top:2px;
 }
 
-.side .review {
-  font-size: 22px;
-  line-height: 1.48;
+.side-card .review{
+    margin-top:18px;
+    font-size:13px;
+    line-height:1.4;
 }
 
-@media (max-width: 900px) {
-  .testimonials {
-    padding: 35px 18px;
-  }
+/*----------------STARS----------------*/
 
-  .testimonials h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
+.stars{
+    color:#f28a3c;
+    font-size:32px;
+    letter-spacing:2px;
+    white-space:nowrap;
+}
 
-  .testimonials > p {
-    font-size: 17px;
-    margin-bottom: 45px;
-  }
+.side-card .stars{
+    font-size:19px;
+}
 
-  .slider {
-    height: auto;
-  }
+/*----------------ANIMATION----------------*/
 
-  .main {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-  }
+.fade{
+    opacity:0;
+    transform:scale(.96);
+}
 
-  .side {
-    display: none;
-  }
+/*----------------MOBILE----------------*/
 
-  .top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    margin-bottom: 25px;
-  }
+@media(max-width:900px){
 
-  .profile img {
-    width: 72px;
-    height: 72px;
-  }
+.testimonials{
+padding:40px 20px;
+}
 
-  h3 {
-    font-size: 23px;
-  }
+.testimonials h1{
+font-size:40px;
+margin-bottom:20px;
+}
 
-  span {
-    font-size: 17px;
-  }
+.testimonials>p{
+font-size:18px;
+margin-bottom:40px;
+}
 
-  .big {
-    font-size: 30px;
-  }
+.testimonial-wrapper{
+height:auto;
+}
 
-  .main-review {
-    font-size: 20px;
-  }
+.side-card{
+display:none;
+}
+
+.main-card{
+position:relative;
+width:100%;
+min-height:auto;
+padding:22px;
+}
+
+.card-top{
+flex-direction:column;
+gap:15px;
+}
+
+.profile{
+gap:15px;
+}
+
+.avatar{
+width:65px;
+height:65px;
+}
+
+.name{
+font-size:22px;
+}
+
+.role{
+font-size:17px;
+}
+
+.review{
+font-size:17px;
+}
+
+.stars{
+font-size:26px;
+}
 }
