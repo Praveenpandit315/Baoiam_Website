@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   BASE
+   ============================================ */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ============================================
+   HERO SECTION WRAPPER
+   ============================================ */
+.hero-section {
+  @apply w-full bg-white overflow-hidden pt-20 pb-16 px-6 md:px-12 lg:px-20;
+}
+
+.hero-wrapper {
+  @apply max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-6;
+}
+
+/* ============================================
+   LEFT SIDE (TEXT CONTENT)
+   ============================================ */
+.hero-left {
+  @apply w-full lg:w-1/2 flex flex-col items-start;
+}
+
+/* small pill badge at the top */
+.hero-badge {
+  @apply flex items-center gap-2 border border-gray-200 rounded-full px-4 py-2 mb-6 text-sm font-semibold text-brand-orange transition-all duration-200;
+}
+
+.hero-badge:hover {
+  @apply border-brand-orange bg-brand-peach/40 scale-105;
+}
+
+/* main big heading */
+.hero-heading {
+  @apply text-4xl md:text-5xl lg:text-[3.4rem] font-extrabold text-gray-900 leading-tight mb-5;
+}
+
+.hero-heading-orange {
+  @apply text-brand-orange;
+}
+
+/* paragraph below heading */
+.hero-para {
+  @apply text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-lg;
+}
+
+/* buttons row */
+.hero-btn-row {
+  @apply flex flex-wrap items-center gap-4 mb-10;
+}
+
+.btn-primary {
+  @apply bg-brand-orange text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-200 shadow-sm;
+}
+
+.btn-primary:hover {
+  @apply bg-orange-600 shadow-md -translate-y-0.5;
+}
+
+.btn-primary i {
+  @apply transition-transform duration-200;
+}
+
+.btn-primary:hover i {
+  @apply translate-x-1;
+}
+
+.btn-secondary {
+  @apply border border-brand-orange text-gray-800 font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-all duration-200;
+}
+
+.btn-secondary:hover {
+  @apply bg-brand-peach/40 -translate-y-0.5;
+}
+
+.btn-secondary i {
+  @apply text-brand-orange transition-transform duration-300;
+}
+
+.btn-secondary:hover i {
+  @apply rotate-180;
+}
+
+/* learners avatar + text row */
+.hero-learners-row {
+  @apply flex items-center gap-4;
+}
+
+.learners-avatar-stack {
+  @apply flex items-center;
+}
+
+/* each avatar circle, overlapping like a stack */
+.learner-avatar {
+  @apply w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white bg-brand-orange -ml-3 first:ml-0 transition-transform duration-200;
+}
+
+.learner-avatar:hover {
+  @apply scale-110 z-10;
+}
+
+.learners-text {
+  @apply text-gray-600 text-sm md:text-base;
+}
+
+.learners-count {
+  @apply text-brand-orange font-semibold;
+}
+
+/* ============================================
+   RIGHT SIDE (IMAGE + STATS CARD)
+   ============================================ */
+.hero-right {
+  @apply relative w-full lg:w-1/2 flex items-center justify-center;
+}
+
+/* the rotated outline square peeking out behind the photo */
+.hero-outline-square {
+  @apply absolute top-0 left-4 md:left-10 w-32 h-32 border-2 border-brand-orange rounded-2xl -rotate-12 z-0;
+}
+
+/* soft peach blob sitting behind the photo for depth */
+.hero-bg-blob {
+  @apply absolute right-6 md:right-10 top-6 w-[220px] md:w-[300px] lg:w-[330px] h-[220px] md:h-[300px] lg:h-[330px] bg-brand-peach rounded-[40%_60%_55%_45%/55%_45%_55%_45%] z-[1];
+}
+
+/* wrapper for the student photo */
+.hero-blob {
+  @apply relative z-10 w-[260px] md:w-[340px] lg:w-[380px];
+}
+
+.hero-student-img {
+  @apply w-full h-auto;
+}
+
+/* a second faint card outline peeking out from behind the stats card */
+.hero-stats-card-shadow {
+  @apply absolute -right-3 -bottom-3 lg:right-1 lg:bottom-1 w-[230px] md:w-[260px] h-full border-2 border-gray-200 rounded-2xl bg-white z-[15];
+}
+
+/* floating stats card */
+.hero-stats-card {
+  @apply absolute right-0 md:right-2 lg:right-6 top-1/2 -translate-y-1/2 w-[230px] md:w-[260px] bg-white rounded-2xl shadow-xl overflow-hidden z-20 transition-transform duration-300;
+}
+
+.hero-stats-card:hover {
+  @apply -translate-y-[calc(50%+0.25rem)] shadow-2xl;
+}
+
+.stats-row {
+  @apply flex items-center gap-3 px-4 py-3;
+}
+
+.stats-icon-box {
+  @apply w-9 h-9 rounded-full bg-brand-peach flex items-center justify-center text-brand-orange text-sm shrink-0;
+}
+
+.stats-text-box {
+  @apply flex flex-col;
+}
+
+.stats-number {
+  @apply text-sm font-bold text-gray-900 leading-tight;
+}
+
+.stats-label {
+  @apply text-xs text-gray-500 leading-tight;
+}
+
+.stats-divider {
+  @apply h-px bg-gray-100 mx-4;
+}
+
+/* orange quote strip at the bottom of the card */
+.stats-quote-strip {
+  @apply bg-brand-orange text-white flex items-start gap-2 px-4 py-3 mt-1;
+}
+
+.stats-quote-strip i {
+  @apply text-xs mt-1 opacity-70;
+}
+
+.stats-quote-strip p {
+  @apply text-xs font-medium leading-snug;
+}
