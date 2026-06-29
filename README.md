@@ -303,6 +303,7 @@ The frontend team is currently working **only on the Homepage**, which has been 
 
 ---
 
+
 # 📊 Sprint Status
 
 | Activity               | Status         |
@@ -319,10 +320,122 @@ The frontend team is currently working **only on the Homepage**, which has been 
 **Current Sprint Progress:** **≈14%**
 
 ---
+# 📅 Day 3 Progress Report (28 June 2026)
+
+## Individual Progress Report
+
+### 🟡 Aditi Maheshwari
+
+* Awaiting final design confirmation from the Design Team before proceeding with implementation.
+* **Progress:** **40%**
+* **Status:** ⏳ On Hold (Design Dependency)
+
+---
+
+### ✅ Anshika Agrawal
+
+* Successfully completed the assigned module and submitted the implementation files.
+* **Progress:** **100%**
+* **Status:** ✅ Completed
+
+---
+
+### ⚠️ Anshika Varshney
+
+* Completed the basic structure of the assigned section.
+* Further development was affected due to laptop/device issues.
+* **Progress:** **55%**
+* **Status:** ⚠️ Partial Progress (Device Issue)
+
+---
+
+### 🟡 Bhoomi Maheshwari
+
+* Completed the assigned implementation.
+* Only minor CSS refinements and responsiveness improvements are pending.
+* **Progress:** **90%**
+* **Status:** 🟡 Nearly Completed
+
+---
+
+### 🟡 Jalpa Chandera
+
+* Completed the assigned section.
+* Final CSS styling improvements are pending.
+* **Progress:** **90%**
+* **Status:** 🟡 Nearly Completed
+
+---
+
+### 🟠 Parul Chaudhary
+
+* Currently working on the assigned module.
+* Implementation will be completed and committed to GitHub.
+* **Progress:** **80%**
+* **Status:** 🟠 In Progress
+
+---
+
+### ✅ Prakhar Saxena
+
+* Delivered excellent work on the assigned module.
+* Implementation completed with good quality.
+* **Progress:** **100%**
+* **Status:** ✅ Completed
+
+---
+
+### 🟠 Vaibhav Rathore
+
+* CTA subsection has been completed successfully.
+* FAQ implementation is pending due to design confirmation.
+* **Progress:** **75%**
+* **Status:** 🟠 Good Progress (Design Dependency)
+
+---
+
+### 🔴 Anshul Kushwah
+
+* No progress update was available for today's review.
+* **Progress:** **0%**
+* **Status:** 🔴 No Update
+
+---
+
+# Sprint Summary
+
+| Metric                             |  Status |
+| ---------------------------------- | ------: |
+| Total Members                      |   **8** |
+| Completed                          |   **2** |
+| Nearly Completed                   |   **2** |
+| In Progress                        |   **2** |
+| Design Dependency                  |   **2** |
+| Device Issue                       |   **1** |
+| Overall Homepage Sprint Completion | **80%** |
+
+---
+
+## Key Observations
+
+* Most assigned homepage modules have reached the final implementation stage.
+* Minor CSS refinements are pending for a few sections.
+* Some modules are waiting for final design confirmation before completion.
+* GitHub submissions are being completed progressively.
+
+---
+
+## Next Action Items
+
+* Complete remaining CSS improvements.
+* Push pending GitHub commits.
+* Complete modules after design confirmation.
+* Begin homepage integration after all modules are finalized.
+
 
 # 🎯 Current Goal
 
-Complete the assigned homepage modules before **28 June 2026**, followed by:
+Complete the assigned homepage modules before **29 June 2026**, followed by:
 
 * Code Review
 * Module Integration
