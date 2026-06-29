@@ -9,6 +9,7 @@ body{
 
 font-family:sans-serif;
 background:#f9f9f9;
+overflow-x: hidden;
 
 }
 
@@ -24,10 +25,10 @@ background:white;
 
 
 .container{
-
-max-width:1300px;
-margin:auto;
-
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
@@ -140,12 +141,11 @@ text-align: center;
 
 }
 .accreditation-section{
-    background: #D9D9D933;   /* Light Gray */
-    padding: 30px 5%;
+    background: #D9D9D933;
+    padding: 50px 5%;
     text-align: center;
-    width: 1439px;
-height: 277px;
-
+    width: 100%;
+    min-height: 277px; /* optional */
 }
 
 
@@ -155,8 +155,8 @@ height: 277px;
 margin-top:0px;
 
 
-padding-top:20px;
-border-top:1px solid #e2e4df5e;
+padding-top:0px;
+border-top:5px solid #e2e4df5e;
 
 
 text-align:center;
@@ -172,17 +172,20 @@ text-align:center;
 font-size:50px;
 font:poppins;
 font-style: bold;
+text-align: center;
 
 }
 
 
 
 .accreditation span{
-
-
-color:#FF6600; 
+    font-style: bold;
+    font-weight: 700;
+    font:poppins;
+    color:#FF6600; 
 
 }
+
 
 
 
@@ -199,8 +202,7 @@ justify-content:center;
 
 gap:60px;
 
-
-margin-top:0px;
+margin-top:20px;
 
 
 flex-wrap:wrap;
@@ -222,7 +224,7 @@ align-items: center;
    width: 106.74980163574219px;
    height: 119.92878723144531px;
    opacity: 1;
-
+   margin-right: 30px;
 }
 .logos img:nth-child(3){
    width: 166px;
