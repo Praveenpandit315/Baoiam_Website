@@ -33,10 +33,12 @@
     align-items: center;
     margin-right: 48px;
     text-decoration: none;
+    height: 100%;
+    overflow: hidden;
   }
   .logo img{
-    width: 129px;
-    height: 129px;
+    width: auto;
+    height: 80px;
     display: block;
 }
 
@@ -93,11 +95,21 @@
   .nav-links .refer-link {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0px;
     font-family:'Poppins',sans-serif;
     font-size:17px;
     font-weight:600;
   }
+
+  .gift-animation{
+    width: 60px;
+    height:60px;
+    margin-right:-8px;
+    flex-shrink:0;
+    margin: 0;
+    padding: 0;
+    transform: translateX(6px);
+}
 
   .nav-actions {
     display: flex;
@@ -264,6 +276,11 @@
 nav{
     padding:0 20px;
     justify-content:space-between;
+     height:70px;
+}
+
+.logo img{
+    height:55px;
 }
 
 .menu-toggle{
@@ -281,26 +298,87 @@ nav{
 }
 
 .nav-links.show{
-
     display:flex;
     flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
     position:absolute;
-    top:76px;
+    top:70px;
     left:0;
     width:100%;
-    background:white;
-    padding:20px;
-    gap:20px;
-
+    background:#fff;
+    padding:25px 0;
+    gap:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .nav-actions.show{
-
     display:flex;
     flex-direction:column;
-    width:100%;
-    background:white;
-    padding:20px;
+    align-items:center;
+    gap:15px;
+    padding-bottom:20px;
+}
 
+/* .btn-login,
+.btn-signup{
+    width:140px;
+} */
+
+.ks-dropdown{
+    position:static;
+    width:100%;
+    box-shadow:none;
+    border:none;
+}
+
+
+
+
+@media (max-width:900px){
+
+nav{
+    padding:0 15px;
+    height:70px;
+}
+
+.logo img{
+    height:52px;
+}
+
+.nav-links.show{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#fff;
+    padding:25px 0;
+    gap:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.nav-actions.show{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding-bottom:20px;
+}
+
+.btn-login,
+.btn-signup{
+    width:180px;
+}
+
+.ks-dropdown{
+    position:static;
+    width:100%;
+    box-shadow:none;
+    border:none;
+}
 }
   
