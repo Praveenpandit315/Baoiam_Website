@@ -1,9 +1,11 @@
-const right = document.getElementById("rightSection");
+const links = document.querySelectorAll("a");
 
-right.addEventListener("mouseenter", function () {
-    right.classList.add("active");
+links.forEach(link=>{
+
+link.addEventListener("mouseenter",()=>{
+
+link.style.transition=".3s";
+
 });
 
-right.addEventListener("mouseleave", function () {
-    right.classList.remove("active");
 });
