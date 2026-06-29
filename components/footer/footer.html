@@ -1,123 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-<title>Footer</title>
+body{
+background:#f2f2f2;
+}
 
-<link rel="stylesheet" href="footer.css">
+footer{
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+background:#081325;
+padding:10px 80px;
+color:white;
+height: auto;
 
-</head>
-<body>
+}
 
-<footer>
+.footer-container{
 
-<div class="container">
+display:flex;
+justify-content:space-between;
+align-items: flex-start;
+margin-top: 0%;
 
-<div class="left">
+}
 
-<img src="https://github.com/Praveenpandit315/Baoiam_Website/blob/main/assets/logos/Baoiam%20Logo.jpeg?raw=true">
+.logo-box{
+width:330px;
+margin-top: 0;
+
+}
+
+.logo{
+
+font-size:40px;
+margin-bottom:20px;
+width:170px;
+height:auto;
+margin-bottom: 0px;
+display: block;
+margin: 0%;
+padding: 0%;
 
 
-<p>
-Follow us for the latest updates,<br>
-career insights,<br>
-and program launches.
-</p>
+}
 
-<div class="social">
+.logo-box p{
 
-<i class="fab fa-facebook-f"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-linkedin-in"></i>
-<i class="fab fa-twitter"></i>
-<i class="fab fa-youtube"></i>
+color:#d8d8d8;
+line-height:1.4;
+font-size:18px;
+margin-top: 0px;
 
-</div>
+}
 
-<h3>DOWNLOAD OUR APP</h3>
+.social-icons{
 
-<div class="store">
-<i class="fab fa-apple"></i>
-<div>
-<p>Download now</p>
-<h4>App Store</h4>
-</div>
-</div>
+display:flex;
+gap:15px;
+margin:30px 0;
 
-<div class="store">
-<i class="fab fa-google-play"></i>
-<div>
-<p>Download now</p>
-<h4>Play Store</h4>
-</div>
-</div>
+}
 
-</div>
+.social-icons a{
 
-<div class="right" id="rightSection">
+height:50px;
+width:50px;
+background:#24344d;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:8px;
+color:white;
+font-size:22px;
+transition:.4s;
+text-decoration: none;
+margin-right: 20px;
+padding-left: 20px;
+padding-right: 20px;
+}
 
-<div class="column">
-<h3>TOP 4 CATEGORY</h3>
+.social-icons a:hover{
 
-<ul>
+background:#007bff;
+transform:translateY(-6px);
 
-<li>Udaan 90</li>
-<li>Success Fusion Program</li>
-<li>Pay after Placement</li>
-<li>Pride Fusion</li>
+}
 
-</ul>
+.logo-box h3{
 
-</div>
+margin-bottom:20px;
 
-<div class="column">
+}
 
-<h3>QUICK ACCESS</h3>
+.app-btn{
 
-<ul>
+display:flex;
+align-items:center;
+gap:15px;
+background:#1a2b42;
+padding:15px;
+width:230px;
+border-radius:8px;
+margin-bottom:15px;
+cursor:pointer;
+transition:.4s;
 
-<li>About</li>
-<li>Become Instructor</li>
-<li>Contact</li>
-<li>GCEP</li>
+}
 
-</ul>
+.app-btn:hover{
 
-</div>
+background:#007bff;
+transform:scale(1.05);
 
-<div class="column">
+}
 
-<h3>SUPPORT</h3>
+.app-btn i{
 
-<ul>
+font-size:35px;
 
-<li>Refund Policy</li>
-<li>FAQS</li>
-<li>Terms & Conditions</li>
-<li>Privacy Policy</li>
+}
 
-</ul>
+.app-btn span{
 
-</div>
+font-size:14px;
+color:#ddd;
 
-</div>
+}
 
-</div>
+.footer-box h3{
 
-<hr>
+margin-bottom:25px;
+font-size:24px;
 
-<p class="copy">
-©2021 Designed by Baioam. All rights reserved.
-</p>
+}
 
-</footer>
+.footer-box ul{
 
-<script src="footer.js"></script>
+list-style:none;
 
-</body>
-</html>
+}
+
+.footer-box ul li{
+
+margin-bottom:18px;
+
+}
+
+.footer-box ul li a{
+
+text-decoration:none;
+color:#d5d5d5;
+font-size:18px;
+transition:.3s;
+
+}
+
+.footer-box ul li a:hover{
+
+color:#4da3ff;
+padding-left:10px;
+
+}
+
+.copyright{
+
+border-top:1px solid rgba(255,255,255,.2);
+margin-top:40px;
+padding-top:20px;
+color:#d6d6d6;
+font-size:18px;
+
+}
+
+@media(max-width:992px){
+
+.footer-container{
+
+flex-direction:column;
+
+}
+
+.logo-box{
+
+width:100%;
+
+}
+
+}
+.play-icon{
+    width:35px;
+    height:35px;
+    object-fit: contain;
+    
+}
