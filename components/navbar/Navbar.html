@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baolam - Be One In A Million</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a class="logo" href="#">
+    <div style="display:flex;align-items:flex-end;">
+     <img src="images/logo.png" alt="logo">
+    </div>
+   
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+
+    <!-- KickStarter Courses with multi-level dropdown -->
+    <li id="ks-nav-item">
+      <div class="ks-trigger" id="ksTrigger">
+        KickStarter&nbsp;Courses
+        <span class="chevron">▾</span>
+      </div>
+
+      <div class="ks-dropdown" id="ksDropdown">
+
+        <!-- Category 1 -->
+        <div class="dd-item" data-cat="web">
+          <span class="dd-label">Success Fusion Program</span>
+          <span class="dd-arrow">></span>
+        </div>
+        <div class="sub-menu" id="sub-web">
+          <div class="sub-item"><span class="dot"></span>Digital Marketing</div>
+          <div class="sub-item"><span class="dot"></span>Data Science</div>
+          <div class="sub-item"><span class="dot"></span>Data Analysis</div>
+          <div class="sub-item"><span class="dot"></span>UI/UX</div>
+        </div>
+
+        <div class="dd-divider"></div>
+
+        <!-- Category 2 -->
+        <div class="dd-item" data-cat="data">
+          <span class="dd-label">Udaan 90</span>
+          <span class="dd-arrow">›</span>
+        </div>
+
+      </div>
+    </li>
+
+    <li><a href="#" class="res">Resources</a></li>
+    <li>
+      <a href="#" class="refer-link">
+        <span style="font-size:18px">🎁</span> Refer &amp; Earn
+      </a>
+    </li>
+    <li><a href="#" class="res" >Internships</a></li>
+    <li><a href="#" class="res" >About us</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-login">Login</button>
+    <button class="btn-signup">Sign Up</button>
+  </div>
+  <div class="menu-toggle">
+    ☰
+</div>
+</nav>
+
+<script src="navbar.js"></script>
+
+</body>
+</html>
