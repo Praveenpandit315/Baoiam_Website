@@ -1,198 +1,112 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer</title>
 
-body{
-background:#f2f2f2;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-footer{
+<link rel="stylesheet" href="style.css">
+</head>
 
-background:#081325;
-padding:10px 80px;
-color:white;
-height: auto;
+<body>
 
-}
+<footer>
 
-.footer-container{
+<div class="footer-container">
 
-display:flex;
-justify-content:space-between;
-align-items: flex-start;
-margin-top: 0%;
+<div class="footer-box logo-box">
 
-}
+<img src="logo.png" alt="BAIOAM Logo" class="logo">
 
-.logo-box{
-width:330px;
-margin-top: 0;
+<p>
+Follow us for the latest updates,<br>
+career insights,<br>
+and program launches.
+</p>
 
-}
+<div class="social-icons">
 
-.logo{
+<a href="#"><i class="fab fa-facebook-f"></i></a>
 
-font-size:40px;
-margin-bottom:20px;
-width:170px;
-height:auto;
-margin-bottom: 0px;
-display: block;
-margin: 0%;
-padding: 0%;
+<a href="#"><i class="fab fa-instagram"></i></a>
 
+<a href="#"><i class="fab fa-linkedin"></i></a>
 
-}
+<a href="#"><i class="fab fa-twitter"></i></a>
 
-.logo-box p{
+<a href="#"><i class="fab fa-youtube"></i></a>
 
-color:#d8d8d8;
-line-height:1.4;
-font-size:18px;
-margin-top: 0px;
+</div>
 
-}
+<h3>DOWNLOAD OUR APP</h3>
 
-.social-icons{
+<div class="app-btn">
+<i class="fab fa-apple"></i>
+<div>
+<span>Download now</span>
+<h4>App Store</h4>
+</div>
+</div>
 
-display:flex;
-gap:15px;
-margin:30px 0;
+<div class="app-btn">
+<img src="playstore.png" class="play-icon" alt="Play Store">
+<div>
+<span>Download now</span>
+<h4>Play Store</h4>
+</div>
+</div>
 
-}
+</div>
 
-.social-icons a{
+<div class="footer-box">
 
-height:50px;
-width:50px;
-background:#24344d;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:8px;
-color:white;
-font-size:22px;
-transition:.4s;
-text-decoration: none;
-margin-right: 20px;
-padding-left: 20px;
-padding-right: 20px;
-}
+<h3>TOP 4 CATEGORY</h3>
 
-.social-icons a:hover{
+<ul>
+<li><a href="#">Udaan 90</a></li>
+<li><a href="#">Success Fusion Program</a></li>
+<li><a href="#">Pay after Placement</a></li>
+<li><a href="#">Pride Fusion</a></li>
+</ul>
 
-background:#007bff;
-transform:translateY(-6px);
+</div>
 
-}
+<div class="footer-box">
 
-.logo-box h3{
+<h3>QUICK ACCESS</h3>
 
-margin-bottom:20px;
+<ul>
+<li><a href="#">About</a></li>
+<li><a href="#">Become Instructor</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">GCEP</a></li>
+</ul>
 
-}
+</div>
 
-.app-btn{
+<div class="footer-box">
 
-display:flex;
-align-items:center;
-gap:15px;
-background:#1a2b42;
-padding:15px;
-width:230px;
-border-radius:8px;
-margin-bottom:15px;
-cursor:pointer;
-transition:.4s;
+<h3>SUPPORT</h3>
 
-}
+<ul>
+<li><a href="#">Refund Policy</a></li>
+<li><a href="#">FAQS</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
 
-.app-btn:hover{
+</div>
 
-background:#007bff;
-transform:scale(1.05);
+</div>
 
-}
+<div class="copyright">
+© 2021 - Designed by <b>Baioam.</b> All rights reserved.
+</div>
 
-.app-btn i{
+</footer>
 
-font-size:35px;
-
-}
-
-.app-btn span{
-
-font-size:14px;
-color:#ddd;
-
-}
-
-.footer-box h3{
-
-margin-bottom:25px;
-font-size:24px;
-
-}
-
-.footer-box ul{
-
-list-style:none;
-
-}
-
-.footer-box ul li{
-
-margin-bottom:18px;
-
-}
-
-.footer-box ul li a{
-
-text-decoration:none;
-color:#d5d5d5;
-font-size:18px;
-transition:.3s;
-
-}
-
-.footer-box ul li a:hover{
-
-color:#4da3ff;
-padding-left:10px;
-
-}
-
-.copyright{
-
-border-top:1px solid rgba(255,255,255,.2);
-margin-top:40px;
-padding-top:20px;
-color:#d6d6d6;
-font-size:18px;
-
-}
-
-@media(max-width:992px){
-
-.footer-container{
-
-flex-direction:column;
-
-}
-
-.logo-box{
-
-width:100%;
-
-}
-
-}
-.play-icon{
-    width:35px;
-    height:35px;
-    object-fit: contain;
-    
-}
+</body>
+</html>
