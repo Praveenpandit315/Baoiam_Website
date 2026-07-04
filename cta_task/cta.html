@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAOIAM CTA</title>
+  <link rel="stylesheet" href="cta.css">
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="left">
+      <img src="cta_baoiam.jpeg" class="logo" alt="BAOIAM Logo">
+
+      <p class="description">
+        BAOIAM is India’s leading affordable EdTech platform committed to empowering
+        students through skill-based learning and guaranteed career support. We offer
+        industry-relevant certification programs in Data Analytics, Digital Marketing
+        with AI, Software Testing, Communication Skills, and more — combining expert-led
+        live training, internships, and placement support. Our mission is to bridge the
+        gap between education and employability, making career success accessible to all.
+      </p>
+
+      <div class="callback">
+        <h2>Confused where to start?</h2>
+        <p>Enter your number and let our counselor clear with path.</p>
+
+        <div class="form">
+          <select>
+            <option>+91</option>
+          </select>
+          <input ttype="text" id="phone" placeholder="Enter mobile number" maxlength="10"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+          <button onclick="validatePhone()">Get Callback</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="phone-wrap">
+        <img src="cta_phone.png" class="phone phone-back" alt="Phone Screen">
+        <img src="cta_phone2.png" class="phone phone-front" alt="Phone Screen">
+      </div>
+    </div>
+
+  </section>
+  <script src="cta.js"></script>
+</body>
+
+</html>
