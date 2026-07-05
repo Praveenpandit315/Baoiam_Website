@@ -31,40 +31,17 @@ image.style.transform="scale(1)";
 
 
 /* Scroll Reveal */
+const card = document.querySelector(".shadow-xl");
 
-const cards=document.querySelectorAll(".item");
+window.addEventListener("scroll", () => {
 
-window.addEventListener("scroll",()=>{
+    const top = card.getBoundingClientRect().top;
 
-cards.forEach(card=>{
+    if (top < window.innerHeight - 100) {
 
-const top=card.getBoundingClientRect().top;
+        card.classList.add("opacity-100", "translate-y-0");
 
-if(top<window.innerHeight-100){
-
-card.classList.add("show");
-
-}
+    }
 
 });
 
-});
-
-
-
-
-document.querySelectorAll("a").forEach(button=>{
-
-button.addEventListener("click",function(e){
-
-if(this.getAttribute("href")==="#"){
-
-e.preventDefault();
-
-alert("Coming Soon");
-
-}
-
-});
-
-});
