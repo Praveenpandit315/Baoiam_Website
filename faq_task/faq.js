@@ -6,7 +6,7 @@ faqs.forEach((item) => {
 
     question.addEventListener("click", () => {
 
-        item.classList.toggle("active");
+        item.classList.toggle("faq-active");
 
         if (item.classList.contains("active")) {
             button.innerHTML = "−";
