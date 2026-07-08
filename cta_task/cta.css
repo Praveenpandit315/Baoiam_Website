@@ -42,11 +42,11 @@ body {
 
 .description {
   text-align:justify;
-  width: 100%;
+  width: 150%;
   max-width: 700px;
-  font-size: 23px;
-  line-height: 1.55;
-  font-weight: 500;
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 499;
   color: #222;
   margin-bottom: 45px;
 }
@@ -108,8 +108,8 @@ body {
 }
 
 .phone-wrap {
-  position: relative;
-  width: 450px;
+  position:relative;
+  width: 430px;
   height: 550px;
 }
 
@@ -120,14 +120,14 @@ body {
 }
 
 .phone-back {
-  width: 245px;
+  width: 250px;
   left: 30px;
   top: 10px;
   z-index: 1;
 }
 
 .phone-front {
-  width: 240px;
+  width: 250px;
   right: 10px;
   top: 115px;
   z-index: 2;
