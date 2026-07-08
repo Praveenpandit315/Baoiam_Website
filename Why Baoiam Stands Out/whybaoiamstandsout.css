@@ -15,18 +15,18 @@ body {
     padding: 40px 20px;
 }
 
-.container {
+.standout-container {
     max-width: 950px;
     width: 100%;
 }
 
 /* Header Section */
-.header {
+.standout-header {
     text-align: center;
     margin-bottom: 45px;
 }
 
-.header h1 {
+.standout-header h1 {
     font-size: 42px;
     font-weight: 800;
     color: #000000;
@@ -34,11 +34,11 @@ body {
     margin-bottom: 15px;
 }
 
-.header .highlight {
+.standout-header .standout-highlight {
     color: #FF6F00; 
 }
 
-.header p {
+.standout-header p {
     font-size: 18px;
     color: #1A1A1A;
     font-weight: 400;
@@ -48,13 +48,13 @@ body {
 }
 
 /* Table Layout */
-.table-container {
+.standout-table-container {
     display: grid;
     grid-template-columns: 4.5fr 1.8fr 1.8fr; 
     gap: 22px; 
 }
 
-.column {
+.standout-column {
     background-color: #F7F7F7;
     border-radius: 8px;
     overflow: hidden;
@@ -63,7 +63,7 @@ body {
 }
 
 /* Header Row for columns */
-.col-header {
+.standout-col-header {
     background-color: #DBDBDB;
     color: #000000;
     font-size: 22px;
@@ -73,7 +73,7 @@ body {
 }
 
 /* Cell properties */
-.cell {
+.standout-cell {
     height: 52px;
     display: flex;
     align-items: center;
@@ -84,13 +84,13 @@ body {
     padding: 0 15px;
 }
 
-.text-left {
+.standout-text-left {
     justify-content: flex-start;
     padding-left: 24px;
 }
 
 /* Icons styling matching the original image */
-.icon {
+.standout-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,12 +101,12 @@ body {
     font-weight: bold;
 }
 
-.icon.check {
+.standout-icon.standout-check {
     background-color: #4CAF50;
     color: white;
 }
 
-.icon.cross {
+.standout-icon.standout-cross {
     background-color: #F44336;
     color: white;
     font-size: 12px;
@@ -114,9 +114,9 @@ body {
 
 /* Mobile Responsive Optimization */
 @media (max-width: 768px) {
-    .header h1 { font-size: 30px; }
-    .header p { font-size: 15px; }
-    .table-container { grid-template-columns: 1fr; gap: 15px; }
-    .text-left { justify-content: center; text-align: center; padding-left: 15px; }
-    .col-header { font-size: 18px; padding: 12px; }
+    .standout-header h1 { font-size: 30px; }
+    .standout-header p { font-size: 15px; }
+    .standout-table-container { grid-template-columns: 1fr; gap: 15px; }
+    .standout-text-left { justify-content: center; text-align: center; padding-left: 15px; }
+    .standout-col-header { font-size: 18px; padding: 12px; }
 }
