@@ -1,0 +1,221 @@
+/* =====================================================
+   BAOIAM - GLOBAL CSS
+   Tech Stack : HTML + Tailwind CSS + Vanilla CSS
+   Author : Production Ready
+===================================================== */
+
+/* ==========================
+   GOOGLE FONTS
+========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ==========================
+   RESET
+========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root{
+
+    /* Brand */
+
+    --primary:#FF6B00;
+    --primary-hover:#E65C00;
+
+    /* Colors */
+
+    --white:#FFFFFF;
+    --black:#111111;
+
+    --text:#1A1A1A;
+    --text-light:#555555;
+    --text-muted:#777777;
+
+    --border:#E5E5E5;
+
+    --section-bg:#FAFAFA;
+
+    /* Shadow */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
+
+    --shadow-md:0 8px 24px rgba(0,0,0,.12);
+
+    --shadow-lg:0 15px 40px rgba(0,0,0,.16);
+
+    /* Radius */
+
+    --radius-sm:8px;
+
+    --radius-md:12px;
+
+    --radius-lg:20px;
+
+    --radius-xl:30px;
+
+    /* Transition */
+
+    --transition:.3s ease;
+
+    /* Layout */
+
+    --container-width:1400px;
+
+    --container-padding:20px;
+
+}
+
+/* ==========================
+   HTML
+========================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    color:var(--text);
+
+    background:var(--white);
+
+    overflow-x:hidden;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* ==========================
+   SELECTION
+========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:var(--container-width);
+
+    margin-inline:auto;
+
+    padding-inline:var(--container-padding);
+
+}
+
+/* ==========================
+   COMMON UTILITIES
+========================== */
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.bg-primary{
+
+    background:var(--primary);
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================
+   MEDIA
+========================== */
+
+@media (max-width:1200px){
+
+.container{
+
+    max-width:1140px;
+
+}
+
+}
+
+@media (max-width:992px){
+
+.container{
+
+    max-width:960px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+:root{
+
+    --container-padding:16px;
+
+}
+
+.container{
+
+    max-width:100%;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.container{
+
+    padding-inline:14px;
+
+}
+
+}
