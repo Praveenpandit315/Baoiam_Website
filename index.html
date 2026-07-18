@@ -1,98 +1,116 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baolam - Be One In A Million</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/navbar.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baolam - Be One In A Million</title>
+<link rel="stylesheet" href="./CSS/Global.css">
+<link rel="stylesheet" href="./CSS/navbar.css">
+<link rel="stylesheet" href="./CSS/hero.css">
+<link rel="stylesheet" href="./CSS/whybaoiam.css">
+<link rel="stylesheet" href="./CSS/standout.css">
+<link rel="stylesheet" href="./CSS/Ourinsight.css">
+<<<<<<< HEAD
+<link rel="stylesheet" href="./CSS/roadmap.css">
+=======
+>>>>>>> origin/main
+<link rel="stylesheet" href="./CSS/testimonial.css">
+<link rel="stylesheet" href="./CSS/faq.css">
+<link rel="stylesheet" href="./CSS/cta.css">
+<link rel="stylesheet" href="./CSS/footer.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
 
-  <!-- our own styles (fonts + tailwind output) -->
-  <link rel="stylesheet" href="/css/Hero/font.css" />
-  <link rel="stylesheet" href="/css/Hero/hero.css" />
-  <link rel="stylesheet" href="/css/whybaoiam.css" />
-  <link rel="stylesheet" href="/css/Ourinsight.css" />
-  
-  <link rel="stylesheet" href="/css/testimonial.css" />
-  <link rel="stylesheet" href="/css/faq.css" />
-  <link rel="stylesheet" href="/css/cta.css" />
-  <link rel="stylesheet" href="/css/footer.css" />
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            fontFamily:{
+                poppins:["Poppins","sans-serif"]
+            },
+
+            colors:{
+                primary:"#ff6b00"
+            }
+
+        }
+    }
+}
+</script>
+
 </head>
-
 <body>
 
-  <!-- ── NAVBAR ── -->
-  <nav>
-    <a class="logo" href="#">
-      <div style="display:flex;align-items:flex-end;">
-        <img src="/assets/Logos/baoiam-logo.png" alt="logo">
+<!-- ── NAVBAR ── -->
+<nav>
+  <a class="logo" href="#">
+    <div style="display:flex;align-items:flex-end;">
+     <img src="assets/images/BAOIAM-LOGO (1).png" alt="logo">
+    </div>
+   
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+
+    <!-- KickStarter Courses with multi-level dropdown -->
+    <li id="ks-nav-item">
+      <div class="ks-trigger" id="ksTrigger">
+        KickStarter&nbsp;Courses
+        <span class="chevron">▾</span>
       </div>
 
-    </a>
+      <div class="ks-dropdown" id="ksDropdown">
 
-    <ul class="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-
-      <!-- KickStarter Courses with multi-level dropdown -->
-      <li id="ks-nav-item">
-        <div class="ks-trigger" id="ksTrigger">
-          KickStarter&nbsp;Courses
-          <span class="chevron">▾</span>
+        <!-- Category 1 -->
+        <div class="dd-item" data-cat="web">
+          <span class="dd-label">Success Fusion Program</span>
+          <span class="dd-arrow">⌄</span>
+        </div>
+        <div class="sub-menu" id="sub-web">
+          <div class="sub-item"><span class="dot"></span>Digital Marketing</div>
+          <div class="sub-item"><span class="dot"></span>Data Science</div>
+          <div class="sub-item"><span class="dot"></span>Data Analysis</div>
+          <div class="sub-item"><span class="dot"></span>UI/UX</div>
         </div>
 
-        <div class="ks-dropdown" id="ksDropdown">
-
-          <!-- Category 1 -->
-          <div class="dd-item" data-cat="web">
-            <span class="dd-label">Success Fusion Program</span>
-            <span class="dd-arrow">></span>
-          </div>
-          <div class="sub-menu" id="sub-web">
-            <div class="sub-item"><span class="dot"></span>Digital Marketing</div>
-            <div class="sub-item"><span class="dot"></span>Data Science</div>
-            <div class="sub-item"><span class="dot"></span>Data Analysis</div>
-            <div class="sub-item"><span class="dot"></span>UI/UX</div>
-          </div>
-
-          <div class="dd-divider"></div>
-
-          <!-- Category 2 -->
-          <div class="dd-item" data-cat="data">
-            <span class="dd-label">Udaan 90</span>
-            <span class="dd-arrow">›</span>
-          </div>
-
+        <!-- Category 2 -->
+        <div class="dd-item" data-cat="data">
+          <span class="dd-label">Udaan 90</span>
+          <span class="dd-arrow">⌄</span>
         </div>
-      </li>
 
-      <li><a href="#" class="res">Resources</a></li>
-      <li>
-        <a href="#" class="refer-link">
-          <lottie-player class="gift-animation" src="/css/giftbox.json" background="transparent" speed="1" loop
-            autoplay>
-          </lottie-player>
-          Refer &amp; Earn
-        </a>
-      </li>
-      <li><a href="#" class="res">Internships</a></li>
-      <li><a href="#" class="res">About us</a></li>
-    </ul>
+      </div>
+    </li>
 
-    <div class="nav-actions">
-      <button class="btn-login">Login</button>
-      <button class="btn-signup">Sign Up</button>
-    </div>
-    <div class="menu-toggle">
-      ☰
-    </div>
-  </nav>
+    <li><a href="#" class="res">Resources</a></li>
+    <li>
+      <a href="#" class="refer-link">
+        <lottie-player
+        class="gift-animation"
+        src="assets/images/giftbox.json"
+        background="transparent"
+        speed ="1"
+        loop
+        autoplay>
+       </lottie-player>
+      Refer &amp; Earn
+      </a>
+    </li>
+    <li><a href="#" class="res" >Internships</a></li>
+    <li><a href="#" class="res" >About us</a></li>
+  </ul>
 
+  <div class="nav-actions">
+    <button class="btn-login">Login</button>
+  </div>
+  <div class="menu-toggle">
+    ☰
+</div>
+</nav>
   <!-- ===================== HERO SECTION ===================== -->
   <section class="hero-section" id="hero">
     <div class="hero-wrapper">
@@ -108,9 +126,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         <!-- main heading -->
         <h1 class="hero-heading">
-          Start Your Learning
-          <br />
-          Journey <span class="hero-heading-orange">Today</span>
+          Learn. Build.
+          <span class="hero-heading-rotator" aria-hidden="true"><span class="hero-heading-orange rotator-word" id="rotatorWord">Get Skilled</span></span>
+          <span class="sr-only">Learn. Build. Get skilled, certified, mentored, job-ready, placed, and hired.</span>
         </h1>
 
         <!-- paragraph -->
@@ -122,7 +140,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <!-- buttons -->
         <div class="hero-btn-row">
           <button class="btn-primary" id="exploreCoursesBtn">
-            Explore courses 
+            Explore courses
             <i class="fa-solid fa-arrow-right"></i>
           </button>
 
@@ -131,31 +149,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             View Learning Paths
           </button>
         </div>
+
         <!-- learners row -->
         <div class="hero-learners-row">
           <div class="learners-avatar-stack">
-            <span  ><img src="/assets/Logos/Profile (1).png" alt="person 1" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (3).png" alt="person 2" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (2).png" alt="person 3" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (4).png" alt="person 4" class="learner-avatar"></span>
+            <span  ><img src="/assets/images/Profile (1).png" alt="person 1" class="learner-avatar"></span>
+            <span ><img src="/assets/images/Profile (3).png" alt="person 2" class="learner-avatar"></span>
+            <span ><img src="/assets/images/Profile (2).png" alt="person 3" class="learner-avatar"></span>
+            <span ><img src="/assets/images/Profile (4).png" alt="person 4" class="learner-avatar"></span>
           </div>
           <p class="learners-text">
-            Join <span class="learners-count">200,000+</span> learners already growing with Baolams
+            Join <span class="learners-count">200,000+</span> learners already growing with Baoiam
           </p>
         </div>
+
       </div>
 
       <!-- right side : image + floating cards -->
       <div class="hero-right">
 
         <!-- decorative outline square behind everything -->
+        <div class="hero-outline-square-back"></div>
         <div class="hero-outline-square"></div>
 
-
+        
 
         <!-- student photo (blob shape + outline already baked into the image) -->
         <div class="hero-blob">
-          <img src="/assets/Images/student-photo.png" alt="student learning online" class="hero-student-img" />
+          <img src="/assets/images/student-photo.png" alt="student learning online" class="hero-student-img" />
         </div>
 
         <!-- faint card outline peeking from behind the stats card -->
@@ -213,7 +234,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           <!-- orange quote strip at bottom of card -->
           <div class="stats-quote-strip">
             <i class="fa-solid fa-quote-left"></i>
-            <p>Learning today, leading tomorrow.</p>
+            <p>Learning today, <br>leading tomorrow.</p>
           </div>
 
         </div>
@@ -226,170 +247,257 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <!-- /hero-wrapper -->
   </section>
   <!-- ===================== END HERO SECTION ===================== -->
-  <!--=======================WHy BAoiam SEcTIOn =======================-->
-<section class="feature-section">
 
-    <div class="container">
+    <!-- ========================= -->
+    <!-- ACCREDITATION -->
+    <!-- ========================= -->
 
-      <p class="small-title">
-        WHY CHOOSE BAOIAMS?
-      </p>
-      <h1 class="main-title">
-        Everything You Need to
-        <span>Succeed</span>
-      </h1>
+    <section class="accreditation-section">
 
-      <div class="divider"></div>
+        <div class="container">
 
-      <div class="cards">
+            <div class="accreditation">
 
-        <div class="card">
-          <img src="/assets/Images/img3.png">
-          <h3>Industry Recognized</h3>
-          <p>
-            Earn certificates that employers trust and value.
-          </p>
-        </div>
+                <h2>
+                    We are
+                    <span>accredited</span>
+                    by
+                </h2>
 
-        <div class="card">
-          <img src="/assets/Images/img2.png">
-          <h3>Learn Anytime</h3>
-          <p>
-            Access courses anytime, anywhere on any device.
-          </p>
-        </div>
+            </div>
 
-        <div class="card">
+            <div class="logos">
 
-          <img src="/assets/Images/img1.png">
-          <h3>Interactive Community</h3>
-          <p>
-            Connect, collaborate and grow with a global community.
-          </p>
+                <img src="/assets/images/in.png" alt="Government of India">
+
+                <img src="/assets/images/sti.png" class="startup-logo" alt="Startup India">
+
+                <img src="/assets/images/is0.png" alt="ISO Certification">
+
+            </div>
 
         </div>
-      </div>
-</section>
 
-<section class="accreditation-section">
-
-  <div class="container">
-
-    <div class="accreditation">
-        <h2>
-          We are
-          <span>accredited</span>
-          by
-        </h2>
-    </div>
-
-    <div class="logos">
-        <img src="/assets/Logos/in.png">
-        <img src="/assets/Logos/sti.png">
-        <img src="/assets/Logos/is0.png">
-    </div>
-
-  </div>
-
-</section>
+    </section>
   <!--===================================End of Acrediceted Section========================================-->
-<!--=======================================OUR INsight suru ================================================-->
-  <section class="insights">
 
-    <div class="container">
+  <!--=======================WHy BAoiam SEcTIOn =======================-->
+     <section class="feature-section">
 
-        <div class="section-heading">
+        <div class="container">
 
-            <h1>Our <span>Insights</span></h1>
-
-            <p>
-                We teach real-world skills, connect you with mentors,
-                and prepare you to crush the industry.
+            <p class="small-title">
+                WHY CHOOSE BAOIAMS?
             </p>
 
-            <div class="buttons">
+            <h1 class="main-title">
+                Everything You Need to
+                <span>Succeed</span>
+            </h1>
 
-                <a href="#" class="btn orange-btn">
-                    Register for Webinar
-                </a>
+            <div class="divider"></div>
 
-                <a href="#" class="btn white-btn">
-                    Talk To Our Counsellor
-                </a>
+            <div class="cardsz">
+
+                <!-- CARD 1 -->
+
+                <div class="cardx">
+
+                    <div class="cardx-img">
+                        <img src="/assets/images/img3.png" alt="Industry Recognized">
+                    </div>
+
+                    <h3>Industry Recognized</h3>
+
+                    <p>
+                        Earn certificates that employers trust and value.
+                    </p>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="cardx">
+
+                    <div class="cardx-img">
+                        <img src="/assets/images/img2.png" alt="Learn Anytime">
+                    </div>
+
+                    <h3>Learn Anytime</h3>
+
+                    <p>
+                        Access courses anytime, anywhere on any device.
+                    </p>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="cardx">
+
+                    <div class="cardx-img">
+                        <img src="assets/images/img1.png" alt="Interactive Community">
+                    </div>
+
+                    <h3>Interactive Community</h3>
+
+                    <p>
+                        Connect, collaborate and grow with a global community.
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-        <!-- Gallery -->
+    </section>
+<!-- =========================
+     OUR INSIGHTS
+========================= -->
 
-        <div class="gallery">
-            <div class="item">
-                <img src="/assets/Images/Desktop.png" alt="Our Insights">
+<section class="bg-gray-100 py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="bg-gray-100 rounded-3xl shadow-xl p-10">
+
+            <div class="text-center">
+
+                <h1 class="text-5xl font-extrabold text-gray-900">
+                    Our <span class="text-orange-500">Insights</span>
+                </h1>
+
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    We teach real-world skills, connect you with mentors,
+                    and prepare you to crush the industry.
+                </p>
+
+                <a href="#"
+                   aria-label="Talk to our counsellor"
+                   class="inline-block mt-8 px-8 py-3 border-2 border-orange-500 rounded-lg font-semibold text-gray-700 hover:bg-orange-500 hover:text-white duration-300">
+                    Talk to our Counsellor
+                </a>
+
             </div>
+
+            <div class="mt-12">
+
+                <img
+                    src="assets/images/Desktop.png"
+                    alt="BAOIAM Insights"
+                    loading="lazy"
+                    class="w-full rounded-2xl shadow-lg">
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= UNIVERSITY ================= -->
+<style>
 
-<section class="university">
+@keyframes logoScroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
 
-    <div class="container">
+.logo-track{
+    animation:logoScroll 20s linear infinite;
+}
 
-        <div class="section-heading">
+.company-track{
+    animation:logoScroll 22s linear infinite;
+}
+/* 
+.logo-slider:hover .logo-track,
+.company-slider:hover .company-track{
+    animation-play-state:paused;
+} */
 
-            <h1>
+</style>
+
+<!-- =========================
+     LEADING UNIVERSITIES
+========================= -->
+
+<section class="bg-white py-20">
+
+    <div>
+
+        <div class="text-center">
+
+            <h2 class="text-5xl font-bold">
                 Build with
-                <span>Leading</span>
+                <span class="text-orange-500">Leading</span>
                 Universities
-            </h1>
+            </h2>
 
-            <p>
-
+            <p class="max-w-3xl mx-auto mt-5 text-gray-600 leading-8 text-lg">
                 We partner with top institutions to deliver
                 world-class learning and exclusive access
                 to cutting-edge resources empowering
                 students for tomorrow.
-
             </p>
 
         </div>
 
-        <div class="logo-slider">
+        <div class="logo-slider w-full overflow-hidden">
 
             <div class="logo-track">
+                <!-- Original Logos -->
 
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-               <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">                
+                <img src="assets/images/Amity.jpg" alt="Amity University" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/GLA.png" alt="GLA University" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/hansraj.jpg" alt="Hansraj College" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/IILM.png" alt="IILM University" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/maitreyi.jpg" alt="Maitreyi College" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/rajdhani.png" alt="Rajdhani College" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <img src="assets/images/RKDF.jpg" alt="RKDF University" loading="lazy" class="w-24 h-24 object-contain hover:scale-110 duration-500">
+
+                <!-- Duplicate Logos -->
+
+                <img src="assets/images/Amity.jpg" alt="Amity University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/GLA.png" alt="GLA University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/hansraj.jpg" alt="Hansraj College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/IILM.png" alt="IILM University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/maitreyi.jpg" alt="Maitreyi College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/rajdhani.png" alt="Rajdhani College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/RKDF.jpg" alt="RKDF University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <!-- Duplicate Logos -->
+
+                <img src="assets/images/Amity.jpg" alt="Amity University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/GLA.png" alt="GLA University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/hansraj.jpg" alt="Hansraj College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/IILM.png" alt="IILM University" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/maitreyi.jpg" alt="Maitreyi College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/rajdhani.png" alt="Rajdhani College" loading="lazy" class="w-24 h-24 object-contain">
+
+                <img src="assets/images/RKDF.jpg" alt="RKDF University" loading="lazy" class="w-24 h-24 object-contain">
 
             </div>
 
@@ -398,64 +506,425 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
 
 </section>
+<!-- =========================
+     PRESTIGE NETWORK
+========================= -->
 
-<!-- ================= NETWORK ================= -->
+<section class="bg-gray-50 py-20">
 
-<section class="network">
+    <div class="w-[90%] max-w-7xl mx-auto">
 
-    <div class="container">
+        <div class="text-center">
 
-        <div class="section-heading">
-
-            <h1>
-
+            <h2 class="text-5xl font-bold">
                 Our
-                <span>Prestige</span>
+                <span class="text-orange-500">Prestige</span>
                 Network
+            </h2>
 
-            </h1>
-
-            <p>
-
+            <p class="max-w-3xl mx-auto mt-5 text-gray-600 leading-8 text-lg">
                 Alliances with bold startups and global
                 leaders spanning top-tier industries
                 and purpose-driven innovation.
-
             </p>
 
         </div>
 
-        <div class="company-slider">
+        <!-- Company Slider -->
+
+        <div class="company-slider overflow-hidden mt-16">
 
             <div class="company-track">
+                <!-- Original Logos -->
 
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
+                <img
+                    src="assets/images/Last_EY.png"
+                    alt="EY"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
 
+                <img
+                    src="assets/images/Last_congnizant.jpeg"
+                    alt="Cognizant"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
+
+                <img
+                    src="assets/images/tcs.jpg"
+                    alt="Tata Consultancy Services"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
+
+                <img
+                    src="assets/images/Last_intensity.jpeg"
+                    alt="Intensity Global"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
+
+                <img
+                    src="assets/images/Last_learnyst.jpg"
+                    alt="Learnyst"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
+
+                <img
+                    src="assets/images/Last_microsoft.jpg"
+                    alt="Microsoft"
+                    loading="lazy"
+                    class="w-40 object-contain hover:scale-110 duration-500">
+
+                <!-- Duplicate Logos -->
+
+                <img
+                    src="assets/images/Last_EY.png"
+                    alt="EY"
+                    loading="lazy"
+                    class="w-40 object-contain">
+
+                <img
+                    src="assets/images/Last_congnizant.jpeg"
+                    alt="Cognizant"
+                    loading="lazy"
+                    class="w-40 object-contain">
+
+                <img
+                    src="assets/images/tcs.jpg"
+                    alt="Tata Consultancy Services"
+                    loading="lazy"
+                    class="w-40 object-contain">
+
+                <img
+                    src="assets/images/Last_intensity.jpeg"
+                    alt="Intensity Global"
+                    loading="lazy"
+                    class="w-40 object-contain">
+
+                <img
+                    src="assets/images/Last_learnyst.jpg"
+                    alt="Learnyst"
+                    loading="lazy"
+                    class="w-40 object-contain">
+
+                <img
+                    src="assets/images/Last_microsoft.jpg"
+                    alt="Microsoft"
+                    loading="lazy"
+                    class="w-40 object-contain">
 
             </div>
 
         </div>
 
     </div>
+
 </section>
 
+<section class="standout-section">
+
+    <div class="standout-container">
+
+        <!-- Header -->
+        <div class="standout-header">
+            <h1>
+                Here’s Why <span class="standout-highlight">BAOIAM Stands Out!</span>
+            </h1>
+
+            <p>
+                Our commitment to quality, dedication and an achievement-oriented mindset sets us apart.
+            </p>
+        </div>
+
+        <!-- Table -->
+        <div class="standout-table-container">
+
+            <!-- Features -->
+            <div class="standout-column standout-features-col">
+
+                <div class="standout-col-header">
+                    Features
+                </div>
+
+                <div class="standout-cell standout-text-left">Live Masterclasses by Experts</div>
+                <div class="standout-cell standout-text-left">1-on-1 Mentorship & Career Coaching</div>
+                <div class="standout-cell standout-text-left">Real-World Projects (Minor + Major)</div>
+                <div class="standout-cell standout-text-left">Guaranteed Internship Opportunities</div>
+                <div class="standout-cell standout-text-left">Personalized Career Roadmap</div>
+                <div class="standout-cell standout-text-left">Live Corporate Exposure</div>
+                <div class="standout-cell standout-text-left">Mock Interviews & Skill Assessments</div>
+                <div class="standout-cell standout-text-left">Resume & Portfolio Mastery</div>
+                <div class="standout-cell standout-text-left">Industry Certification</div>
+                <div class="standout-cell standout-text-left">Placement Assistance</div>
+
+            </div>
+
+            <!-- Others -->
+
+            <div class="standout-column standout-others-col">
+
+                <div class="standout-col-header">
+                    Others
+                </div>
+
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+
+            </div>
+
+            <!-- BAOIAM -->
+
+            <div class="standout-column standout-us-col">
+
+                <div class="standout-col-header">
+                    Us
+                </div>
+
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<<<<<<< HEAD
+<!-- ======================================Roadmap============================================= -->
+ <section class="roadmap-section">
+
+    <!-- Background Decoration -->
+
+    <img src="assets/images/pattern-left.svg"
+        class="roadmap-bg-pattern pattern-left-top"
+        alt="">
+
+    <img src="assets/images/pattern-right.svg"
+        class="roadmap-bg-pattern pattern-right-middle"
+        alt="">
+
+    <img src="assets/images/pattern-left.svg"
+        class="roadmap-bg-pattern pattern-left-middle"
+        alt="">
+
+    <img src="assets/images/pattern-right.svg"
+        class="roadmap-bg-pattern pattern-right-bottom"
+        alt="">
+
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="roadmap-heading">
+
+            <h2>
+
+                Your Career Journey
+
+                <span>Starts</span>
+                Here
+                  <img 
+            src="assets/images/heading-lines.png"
+            class="heading-accent"
+            alt=""
+        >
+
+            </h2>
+
+        </div>
+
+
+        <!-- ========================= -->
+
+        <!-- Module 1 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item module-1 reveal">
+
+            <div class="roadmap-content">
+
+                <h3>Module 1: Apply & Get Started</h3>
+
+                <p>
+
+                   Begin your journey by applying to the program, attending the orientation session, & gaining access to all the learning resources & support you need for success.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module1.svg"
+                        alt="Module 1">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-1">
+
+            <img src="assets/images/path1.svg"
+                alt="">
+
+        </div>
+
+
+        <!-- ========================= -->
+
+        <!-- Module 2 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item reverse module-2 reveal">
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module2.svg"
+                        alt="Module 2">
+
+                </div>
+
+            </div>
+
+
+            <div class="roadmap-content">
+
+                <h3>Module 2: Learn & Upskill</h3>
+
+                <p>
+
+                 Develop in-demand skills through expert-led courses, hands-on learning, mentorship, and continuous practice designed to prepare you for the industry.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-2">
+
+            <img src="assets/images/path2.svg"
+                alt="">
+
+        </div>
+
+
+
+        <!-- ========================= -->
+
+        <!-- Module 3 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item module-3 reveal">
+
+            <div class="roadmap-content">
+
+                <h3>Module 3: Build & Prepare</h3>
+
+                <p>
+
+                   Strengthen your portfolio with real-world projects, create a professional resume, & prepare for interviews through mock assessments & career guidance.
+
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module3.svg"
+                        alt="Module 3">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-3">
+
+            <img src="assets/images/path3.svg"
+                alt="">
+
+        </div>
+
+
+
+        <!-- ========================= -->
+
+        <!-- Module 4 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item reverse module-4 reveal">
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module4.svg"
+                        alt="Module 4">
+
+                </div>
+
+            </div>
+
+
+            <div class="roadmap-content">
+
+                <h3>Module 4: Get Hired</h3>
+
+                <p>
+
+                    Connect with leading recruiters, explore relevant job opprtunities, receive dedicated placement support, and launch your career with confidence.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+=======
+>>>>>>> origin/main
+<!-- =====================================Testimonial========================================== -->
 <section class="testimonial-section">
   <h1 class="testimonial-title">Testimonials</h1>
   <p class="testimonial-subtitle">
@@ -468,15 +937,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="testimonial-card testimonial-side-card testimonial-right-card" id="rightCard"></div>
   </div>
 </section>
-<!--==================================faq=================================================================-->
 <section class="faq-section">
 
-    <!-- Left Section -->
+    <!-- Left Side -->
     <div class="faq-left">
 
         <h1>
-            Frequently asked <br>
-            questions<span>?</span>
+            Frequently Asked <br>
+            Questions<span>?</span>
         </h1>
 
         <p class="faq-text">
@@ -485,97 +953,104 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             and certifications, we've got you covered.
         </p>
 
-        <img src="/assets/Images/faq.png" alt="FAQ" class="faq-img">
+        <img
+            src="/assets/images/faq.png"
+            alt="FAQ Illustration"
+            class="faq-img"
+        >
 
     </div>
 
-    <!-- Right Section -->
+    <!-- Right Side -->
     <div class="faq-right">
 
-        <!-- Question 1 -->
+        <!-- FAQ 1 -->
         <div class="faq-item">
 
             <div class="faq-question">
-                <p>Who can apply for internships or courses?</p>
-                <button>+</button>
+
+                <p>
+                    How is BAOIAM different from other internship or course providers?
+                </p>
+
+                <button type="button">+</button>
+
             </div>
 
             <div class="faq-answer">
-                Students, graduates, and working professionals are welcome
-                to apply. We have opportunities for all skill levels.
+
+                We blend practical industry exposure with structured learning,
+                ensuring skill development, real-world experience, and career
+                readiness.
+
             </div>
 
         </div>
 
-        <!-- Question 2 -->
+        <!-- FAQ 2 -->
         <div class="faq-item">
 
             <div class="faq-question">
-                <p>Are the courses industry-recognized?</p>
-                <button>+</button>
+
+                <p>
+                    Do you collaborate with universities or industry partners?
+                </p>
+
+                <button type="button">+</button>
+
             </div>
 
             <div class="faq-answer">
-                Our courses are designed in collaboration with industry
-                experts and are recognized by leading organizations.
+
+                Yes. We collaborate with universities and industry partners to
+                provide updated learning experiences and better career
+                opportunities.
+
             </div>
 
         </div>
 
-        <!-- Question 3 -->
+        <!-- FAQ 3 -->
         <div class="faq-item">
 
             <div class="faq-question">
-                <p>Will I get guidance and mentorship during the internship?</p>
-                <button>+</button>
+
+                <p>
+                    How can I contact support if I face any issues?
+                </p>
+
+                <button type="button">+</button>
+
             </div>
 
             <div class="faq-answer">
-                Yes. Every intern is paired with experienced mentors who
-                provide regular guidance, feedback, and support throughout
-                the program. Our mentorship model ensures you not only
-                complete assigned tasks but also gain valuable insights into
-                industry practices, career development, and skill
-                enhancement. You'll have access to one-on-one sessions,
-                group discussions, and progress reviews to help you grow
-                professionally.
+
+                You can contact us through email, WhatsApp, or live chat.
+                Our support team usually responds within 24 hours.
+
             </div>
 
         </div>
 
-        <!-- Question 4 -->
+        <!-- FAQ 4 -->
         <div class="faq-item">
 
             <div class="faq-question">
-                <p>Can I apply for multiple domains at the same time?</p>
-                <button>+</button>
+
+                <p>
+                    Do you offer both online and offline programs?
+                </p>
+
+                <button type="button">+</button>
+
             </div>
 
             <div class="faq-answer">
-                Yes, you are welcome to apply for internships in more than
-                one domain. We encourage applicants to explore different
-                areas of interest. However, final selection will depend on
-                your skills, availability, and how well you meet the
-                requirements of each domain.
-            </div>
 
-        </div>
+                Most of our programs are available online for maximum
+                flexibility, while selected courses and internship programs
+                are conducted offline.
 
-        <!-- Question 5 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Are the internships paid or unpaid?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Internship compensation varies depending on the position and
-                domain. Some roles are paid, while others are unpaid but come
-                with valuable training, mentorship, and certification. The
-                payment details for each internship are clearly mentioned in
-                the respective opening, so applicants can review them before
-                applying.
             </div>
 
         </div>
@@ -583,917 +1058,189 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
 
 </section>
-<!=================================================cta section---=========================================== -- >
+<section class="cta-hero">
 
-  <section class="hero">
+    <!-- Left -->
+    <div class="cta-left">
 
-    <div class="left">
-      <img src="/assets/Logos/cta_baoiam.jpeg" class="logo" alt="BAOIAM Logo">
+        <img
+            src="/assets/images/cta_baoiam.jpeg"
+            alt="BAOIAM Logo"
+            class="cta-logo"
+        >
 
-      <p class="description">
-        BAOIAM is India’s leading affordable EdTech platform committed to empowering
-        students through skill-based learning and guaranteed career support. We offer
-        industry-relevant certification programs in Data Analytics, Digital Marketing
-        with AI, Software Testing, Communication Skills, and more — combining expert-led
-        live training, internships, and placement support. Our mission is to bridge the
-        gap between education and employability, making career success accessible to all.
-      </p>
+        <p class="cta-description">
+            BAOIAM is India's leading affordable EdTech platform empowering students through
+            skill-based learning and career support. We bridge the gap between education and
+            employability with expert training, internships, and placement assistance.
+        </p>
 
-      <div class="callback">
-        <h2>Confused where to start?</h2>
-        <p>Enter your number and let our counselor clear with path.</p>
+        <div class="cta-callback">
 
-        <div class="form">
-          <select>
-            <option>+91</option>
-          </select>
-          <input ttype="text" id="phone" placeholder="Enter mobile number" maxlength="10"
-            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-          <button onclick="validatePhone()">Get Callback</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="phone-wrap">
-        <img src="/assets/Images/cta_phone.jpeg" class="phone phone-back" alt="Phone Screen">
-        <img src="/assets/Images/cta_phone2.jpeg" class="phone phone-front" alt="Phone Screen">
-      </div>
-    </div>
-
-  </section>
-<!=========================================Footer=====================================================
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-    <div class="footer-container">
-
-        <!-- Logo Section -->
-        <div class="footer-box logo-box">
-
-            <img src="/assets/Logos/image 29.png" alt="BAOIAM Logo" class="logo">
+            <h2>Confused where to start?</h2>
 
             <p>
-                Follow us for the latest updates,<br>
-                career insights,<br>
-                and program launches.
+                Enter your number and let our counselor clear your path.
             </p>
 
-            <div class="social-icons">
+            <form class="cta-form" onsubmit="event.preventDefault(); validatePhone();">
 
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <select class="cta-select" aria-label="Country Code">
+                    <option value="+91">+91</option>
+                </select>
 
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <input
+                    type="tel"
+                    id="phone"
+                    class="cta-input"
+                    placeholder="Enter mobile number"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    pattern="[0-9]{10}"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+                >
 
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <button
+                    type="submit"
+                    class="cta-button">
+                    Get Callback
+                </button>
 
-                <a href="#"><i class="fab fa-twitter"></i></a>
-
-                <a href="#"><i class="fab fa-youtube"></i></a>
-
-            </div>
-
-            <h3>DOWNLOAD OUR APP</h3>
-
-            <div class="app-btn">
-
-                <i class="fab fa-apple"></i>
-
-                <div>
-                    <span>Download now</span>
-                    <h4>App Store</h4>
-                </div>
-
-            </div>
-
-            <div class="app-btn">
-
-                <img src="playstore.png" alt="Play Store" class="play-icon">
-
-                <div>
-                    <span>Download now</span>
-                    <h4>Play Store</h4>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Top Categories -->
-
-        <div class="footer-box">
-
-            <h3>TOP 4 CATEGORY</h3>
-
-            <ul>
-
-                <li><a href="#">Udaan 90</a></li>
-                <li><a href="#">Success Fusion Program</a></li>
-                <li><a href="#">Pay After Placement</a></li>
-                <li><a href="#">Pride Fusion</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Quick Access -->
-
-        <div class="footer-box">
-
-            <h3>QUICK ACCESS</h3>
-
-            <ul>
-
-                <li><a href="#">About</a></li>
-                <li><a href="#">Become Instructor</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">GCEP</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Support -->
-
-        <div class="footer-box">
-
-            <h3>SUPPORT</h3>
-
-            <ul>
-
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-
-            </ul>
+            </form>
 
         </div>
 
     </div>
 
-    <div class="copyright">
+    <!-- Right -->
+    <div class="cta-right">
 
-        © 2021 - Designed by <strong>BAOIAM.</strong> All Rights Reserved.
+        <div class="cta-phone-wrap">
+
+            <img
+                src="/assets/images/cta_phone.jpeg"
+                alt="BAOIAM App Screen"
+                class="cta-phone cta-phone-back"
+            >
+
+            <img
+                src="/assets/images/cta_phone2.jpeg"
+                alt="BAOIAM App Features"
+                class="cta-phone cta-phone-front"
+            >
+
+        </div>
 
     </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-box logo-box">
+
+<img src="/assets/images/logo.png" alt="BAIOAM Logo" class="logo">
+
+<p>
+Follow us for the latest updates,<br>
+career insights,<br>
+and program launches.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+<h3>DOWNLOAD OUR APP</h3>
+
+<div class="app-btn">
+<i class="fab fa-apple"></i>
+<div>
+<span>Download now</span>
+<h4>App Store</h4>
+</div>
+</div>
+
+<div class="app-btn">
+<img src="/assets/images/playstore.png" class="play-icon" alt="Play Store">
+<div>
+<span>Download now</span>
+<h4>Play Store</h4>
+</div>
+</div>
+
+</div>
+
+<div class="footer-box">
+
+<h3>TOP 4 CATEGORY</h3>
+
+<ul>
+<li><a href="#">Udaan 90</a></li>
+<li><a href="#">Success Fusion Program</a></li>
+<li><a href="#">Pay after Placement</a></li>
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>QUICK ACCESS</h3>
+
+<ul>
+<li><a href="#">About</a></li>
+<li><a href="#">Become Instructor</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">GCEP</a></li>
+</ul>
+
+</div>
+
+<div class="footer-box">
+
+<h3>SUPPORT</h3>
+
+<ul>
+<li><a href="#">Refund Policy</a></li>
+<li><a href="#">FAQS</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2021 - Designed by <b>Baioam.</b> All rights reserved.
+</div>
 
 </footer>
 
-  <script src="/js/script.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<<<<<<< HEAD
+<script src="/js/script.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
-
 </html>
 =======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baolam - Be One In A Million</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/navbar.css">
-
-
-  <!-- our own styles (fonts + tailwind output) -->
-  <link rel="stylesheet" href="/css/Hero/font.css" />
-  <link rel="stylesheet" href="/css/Hero/hero.css" />
-  <link rel="stylesheet" href="/css/whybaoiam.css" />
-  <link rel="stylesheet" href="/css/Ourinsight.css" />
-  
-  <link rel="stylesheet" href="/css/testimonial.css" />
-  <link rel="stylesheet" href="/css/faq.css" />
-  <link rel="stylesheet" href="/css/cta.css" />
-  <link rel="stylesheet" href="/css/footer.css" />
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body>
-
-  <!-- ── NAVBAR ── -->
-  <nav>
-    <a class="logo" href="#">
-      <div style="display:flex;align-items:flex-end;">
-        <img src="/assets/Logos/baoiam-logo.png" alt="logo">
-      </div>
-
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-
-      <!-- KickStarter Courses with multi-level dropdown -->
-      <li id="ks-nav-item">
-        <div class="ks-trigger" id="ksTrigger">
-          KickStarter&nbsp;Courses
-          <span class="chevron">▾</span>
-        </div>
-
-        <div class="ks-dropdown" id="ksDropdown">
-
-          <!-- Category 1 -->
-          <div class="dd-item" data-cat="web">
-            <span class="dd-label">Success Fusion Program</span>
-            <span class="dd-arrow">></span>
-          </div>
-          <div class="sub-menu" id="sub-web">
-            <div class="sub-item"><span class="dot"></span>Digital Marketing</div>
-            <div class="sub-item"><span class="dot"></span>Data Science</div>
-            <div class="sub-item"><span class="dot"></span>Data Analysis</div>
-            <div class="sub-item"><span class="dot"></span>UI/UX</div>
-          </div>
-
-          <div class="dd-divider"></div>
-
-          <!-- Category 2 -->
-          <div class="dd-item" data-cat="data">
-            <span class="dd-label">Udaan 90</span>
-            <span class="dd-arrow">›</span>
-          </div>
-
-        </div>
-      </li>
-
-      <li><a href="#" class="res">Resources</a></li>
-      <li>
-        <a href="#" class="refer-link">
-          <lottie-player class="gift-animation" src="/css/giftbox.json" background="transparent" speed="1" loop
-            autoplay>
-          </lottie-player>
-          Refer &amp; Earn
-        </a>
-      </li>
-      <li><a href="#" class="res">Internships</a></li>
-      <li><a href="#" class="res">About us</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button class="btn-login">Login</button>
-      <button class="btn-signup">Sign Up</button>
-    </div>
-    <div class="menu-toggle">
-      ☰
-    </div>
-  </nav>
-
-  <!-- ===================== HERO SECTION ===================== -->
-  <section class="hero-section" id="hero">
-    <div class="hero-wrapper">
-
-      <!-- left side : text content -->
-      <div class="hero-left">
-
-        <!-- small badge -->
-        <div class="hero-badge">
-          <span>🚀</span>
-          <span>EMPOWER YOUR FUTURE</span>
-        </div>
-
-        <!-- main heading -->
-        <h1 class="hero-heading">
-          Start Your Learning
-          <br />
-          Journey <span class="hero-heading-orange">Today</span>
-        </h1>
-
-        <!-- paragraph -->
-        <p class="hero-para">
-          Access industry-leading courses, earn recognized
-          certificates, and build the skills to future-proof your career.
-        </p>
-
-        <!-- buttons -->
-        <div class="hero-btn-row">
-          <button class="btn-primary" id="exploreCoursesBtn">
-            Explore courses 
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-
-          <button class="btn-secondary" id="viewPathsBtn">
-            <i class="fa-solid fa-arrows-rotate"></i>
-            View Learning Paths
-          </button>
-        </div>
-        <!-- learners row -->
-        <div class="hero-learners-row">
-          <div class="learners-avatar-stack">
-            <span  ><img src="/assets/Logos/Profile (1).png" alt="person 1" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (3).png" alt="person 2" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (2).png" alt="person 3" class="learner-avatar"></span>
-            <span ><img src="/assets/Logos/Profile (4).png" alt="person 4" class="learner-avatar"></span>
-          </div>
-          <p class="learners-text">
-            Join <span class="learners-count">200,000+</span> learners already growing with Baolams
-          </p>
-        </div>
-      </div>
-
-      <!-- right side : image + floating cards -->
-      <div class="hero-right">
-
-        <!-- decorative outline square behind everything -->
-        <div class="hero-outline-square"></div>
-
-
-
-        <!-- student photo (blob shape + outline already baked into the image) -->
-        <div class="hero-blob">
-          <img src="/assets/Images/student-photo.png" alt="student learning online" class="hero-student-img" />
-        </div>
-
-        <!-- faint card outline peeking from behind the stats card -->
-        <div class="hero-stats-card-shadow"></div>
-
-        <!-- stats card on the right -->
-        <div class="hero-stats-card" id="statsCard">
-
-          <div class="stats-row">
-            <div class="stats-icon-box">
-              <i class="fa-solid fa-user-group"></i>
-            </div>
-            <div class="stats-text-box">
-              <p class="stats-number">200K+</p>
-              <p class="stats-label">Active Learners</p>
-            </div>
-          </div>
-
-          <div class="stats-divider"></div>
-
-          <div class="stats-row">
-            <div class="stats-icon-box">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-            <div class="stats-text-box">
-              <p class="stats-number">500+</p>
-              <p class="stats-label">Expert Instructors</p>
-            </div>
-          </div>
-
-          <div class="stats-divider"></div>
-
-          <div class="stats-row">
-            <div class="stats-icon-box">
-              <i class="fa-solid fa-bookmark"></i>
-            </div>
-            <div class="stats-text-box">
-              <p class="stats-number">1000+</p>
-              <p class="stats-label">Courses &amp; Paths</p>
-            </div>
-          </div>
-
-          <div class="stats-divider"></div>
-
-          <div class="stats-row">
-            <div class="stats-icon-box">
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div class="stats-text-box">
-              <p class="stats-number">98%</p>
-              <p class="stats-label">Success Rate</p>
-            </div>
-          </div>
-
-          <!-- orange quote strip at bottom of card -->
-          <div class="stats-quote-strip">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Learning today, leading tomorrow.</p>
-          </div>
-
-        </div>
-        <!-- /hero-stats-card -->
-
-      </div>
-      <!-- /hero-right -->
-
-    </div>
-    <!-- /hero-wrapper -->
-  </section>
-  <!-- ===================== END HERO SECTION ===================== -->
-  <!--=======================WHy BAoiam SEcTIOn =======================-->
-<section class="feature-section">
-
-    <div class="container">
-
-      <p class="small-title">
-        WHY CHOOSE BAOIAMS?
-      </p>
-      <h1 class="main-title">
-        Everything You Need to
-        <span>Succeed</span>
-      </h1>
-
-      <div class="divider"></div>
-
-      <div class="cards">
-
-        <div class="card">
-          <img src="/assets/Images/img3.png">
-          <h3>Industry Recognized</h3>
-          <p>
-            Earn certificates that employers trust and value.
-          </p>
-        </div>
-
-        <div class="card">
-          <img src="/assets/Images/img2.png">
-          <h3>Learn Anytime</h3>
-          <p>
-            Access courses anytime, anywhere on any device.
-          </p>
-        </div>
-
-        <div class="card">
-
-          <img src="/assets/Images/img1.png">
-          <h3>Interactive Community</h3>
-          <p>
-            Connect, collaborate and grow with a global community.
-          </p>
-
-        </div>
-      </div>
-</section>
-
-<section class="accreditation-section">
-
-  <div class="container">
-
-    <div class="accreditation">
-        <h2>
-          We are
-          <span>accredited</span>
-          by
-        </h2>
-    </div>
-
-    <div class="logos">
-        <img src="/assets/Logos/in.png">
-        <img src="/assets/Logos/sti.png">
-        <img src="/assets/Logos/is0.png">
-    </div>
-
-  </div>
-
-</section>
-  <!--===================================End of Acrediceted Section========================================-->
-<!--=======================================OUR INsight suru ================================================-->
-  <section class="insights">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h1>Our <span>Insights</span></h1>
-
-            <p>
-                We teach real-world skills, connect you with mentors,
-                and prepare you to crush the industry.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#" class="btn orange-btn">
-                    Register for Webinar
-                </a>
-
-                <a href="#" class="btn white-btn">
-                    Talk To Our Counsellor
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Gallery -->
-
-        <div class="gallery">
-            <div class="item">
-                <img src="/assets/Images/Desktop.png" alt="Our Insights">
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= UNIVERSITY ================= -->
-
-<section class="university">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h1>
-                Build with
-                <span>Leading</span>
-                Universities
-            </h1>
-
-            <p>
-
-                We partner with top institutions to deliver
-                world-class learning and exclusive access
-                to cutting-edge resources empowering
-                students for tomorrow.
-
-            </p>
-
-        </div>
-
-        <div class="logo-slider">
-
-            <div class="logo-track">
-
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-               <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">
-                <img src="/assets/Images/Amity.jpg" alt="Amity University">
-                <img src="/assets/Images/GLA.png" alt="GLA University">
-                <img src="/assets/Images/hansraj.jpg" alt="Hansraj University">
-                <img src="/assets/Images/IILM.png" alt="IILM University">
-                <img src="/assets/Images/maitreyi.jpg" alt="Maitareyi University">
-                <img src="/assets/Images/rajdhani.png" alt="Rajdhani University">
-                <img src="/assets/Images/RKDF.jpg" alt="RKDF University">                
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= NETWORK ================= -->
-
-<section class="network">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <h1>
-
-                Our
-                <span>Prestige</span>
-                Network
-
-            </h1>
-
-            <p>
-
-                Alliances with bold startups and global
-                leaders spanning top-tier industries
-                and purpose-driven innovation.
-
-            </p>
-
-        </div>
-
-        <div class="company-slider">
-
-            <div class="company-track">
-
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
-                <img src="/assets/Images/Last_EY.png" alt="Ey_logo">
-                <img src="/assets/Images/Last_congnizant.jpeg" alt="Congnizat_logo">
-                <img src="/assets/Images/tcs.jpg" alt="Tcs_logo">
-                <img src="/assets/Images/Last_intensity.jpeg" alt="Intensity_logo">
-                <img src="/assets/Images/Last_learnyst.jpg" alt="learnyst_logo">
-                <img src="/assets/Images/Last_microsoft.jpg" alt="Microsoft_logo">
-
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section class="testimonial-section">
-  <h1 class="testimonial-title">Testimonials</h1>
-  <p class="testimonial-subtitle">
-    Experts you guide, Mentors who matter. We teach what you need
-  </p>
-
-  <div class="testimonial-wrapper">
-    <div class="testimonial-card testimonial-side-card testimonial-left-card" id="leftCard"></div>
-    <div class="testimonial-card testimonial-main-card" id="mainCard"></div>
-    <div class="testimonial-card testimonial-side-card testimonial-right-card" id="rightCard"></div>
-  </div>
-</section>
-<!--==================================faq=================================================================-->
-<section class="faq-section">
-
-    <!-- Left Section -->
-    <div class="faq-left">
-
-        <h1>
-            Frequently asked <br>
-            questions<span>?</span>
-        </h1>
-
-        <p class="faq-text">
-            Everything you need to know before enrolling.
-            From eligibility and course details to internships
-            and certifications, we've got you covered.
-        </p>
-
-        <img src="/assets/Images/faq.png" alt="FAQ" class="faq-img">
-
-    </div>
-
-    <!-- Right Section -->
-    <div class="faq-right">
-
-        <!-- Question 1 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Who can apply for internships or courses?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Students, graduates, and working professionals are welcome
-                to apply. We have opportunities for all skill levels.
-            </div>
-
-        </div>
-
-        <!-- Question 2 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Are the courses industry-recognized?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Our courses are designed in collaboration with industry
-                experts and are recognized by leading organizations.
-            </div>
-
-        </div>
-
-        <!-- Question 3 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Will I get guidance and mentorship during the internship?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Yes. Every intern is paired with experienced mentors who
-                provide regular guidance, feedback, and support throughout
-                the program. Our mentorship model ensures you not only
-                complete assigned tasks but also gain valuable insights into
-                industry practices, career development, and skill
-                enhancement. You'll have access to one-on-one sessions,
-                group discussions, and progress reviews to help you grow
-                professionally.
-            </div>
-
-        </div>
-
-        <!-- Question 4 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Can I apply for multiple domains at the same time?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Yes, you are welcome to apply for internships in more than
-                one domain. We encourage applicants to explore different
-                areas of interest. However, final selection will depend on
-                your skills, availability, and how well you meet the
-                requirements of each domain.
-            </div>
-
-        </div>
-
-        <!-- Question 5 -->
-        <div class="faq-item">
-
-            <div class="faq-question">
-                <p>Are the internships paid or unpaid?</p>
-                <button>+</button>
-            </div>
-
-            <div class="faq-answer">
-                Internship compensation varies depending on the position and
-                domain. Some roles are paid, while others are unpaid but come
-                with valuable training, mentorship, and certification. The
-                payment details for each internship are clearly mentioned in
-                the respective opening, so applicants can review them before
-                applying.
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!=================================================cta section---=========================================== -- >
-
-  <section class="hero">
-
-    <div class="left">
-      <img src="/assets/Logos/cta_baoiam.jpeg" class="logo" alt="BAOIAM Logo">
-
-      <p class="description">
-        BAOIAM is India’s leading affordable EdTech platform committed to empowering
-        students through skill-based learning and guaranteed career support. We offer
-        industry-relevant certification programs in Data Analytics, Digital Marketing
-        with AI, Software Testing, Communication Skills, and more — combining expert-led
-        live training, internships, and placement support. Our mission is to bridge the
-        gap between education and employability, making career success accessible to all.
-      </p>
-
-      <div class="callback">
-        <h2>Confused where to start?</h2>
-        <p>Enter your number and let our counselor clear with path.</p>
-
-        <div class="form">
-          <select>
-            <option>+91</option>
-          </select>
-          <input ttype="text" id="phone" placeholder="Enter mobile number" maxlength="10"
-            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-          <button onclick="validatePhone()">Get Callback</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="right">
-      <div class="phone-wrap">
-        <img src="/assets/Images/cta_phone.jpeg" class="phone phone-back" alt="Phone Screen">
-        <img src="/assets/Images/cta_phone2.jpeg" class="phone phone-front" alt="Phone Screen">
-      </div>
-    </div>
-
-  </section>
-<!=========================================Footer=====================================================
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-    <div class="footer-container">
-
-        <!-- Logo Section -->
-        <div class="footer-box logo-box">
-
-            <img src="/assets/Logos/image 29.png" alt="BAOIAM Logo" class="logo">
-
-            <p>
-                Follow us for the latest updates,<br>
-                career insights,<br>
-                and program launches.
-            </p>
-
-            <div class="social-icons">
-
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-                <a href="#"><i class="fab fa-instagram"></i></a>
-
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-                <a href="#"><i class="fab fa-twitter"></i></a>
-
-                <a href="#"><i class="fab fa-youtube"></i></a>
-
-            </div>
-
-            <h3>DOWNLOAD OUR APP</h3>
-
-            <div class="app-btn">
-
-                <i class="fab fa-apple"></i>
-
-                <div>
-                    <span>Download now</span>
-                    <h4>App Store</h4>
-                </div>
-
-            </div>
-
-            <div class="app-btn">
-
-                <img src="playstore.png" alt="Play Store" class="play-icon">
-
-                <div>
-                    <span>Download now</span>
-                    <h4>Play Store</h4>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Top Categories -->
-
-        <div class="footer-box">
-
-            <h3>TOP 4 CATEGORY</h3>
-
-            <ul>
-
-                <li><a href="#">Udaan 90</a></li>
-                <li><a href="#">Success Fusion Program</a></li>
-                <li><a href="#">Pay After Placement</a></li>
-                <li><a href="#">Pride Fusion</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Quick Access -->
-
-        <div class="footer-box">
-
-            <h3>QUICK ACCESS</h3>
-
-            <ul>
-
-                <li><a href="#">About</a></li>
-                <li><a href="#">Become Instructor</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">GCEP</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Support -->
-
-        <div class="footer-box">
-
-            <h3>SUPPORT</h3>
-
-            <ul>
-
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-    <div class="copyright">
-
-        © 2021 - Designed by <strong>BAOIAM.</strong> All Rights Reserved.
-
-    </div>
-
-</footer>
-
-  <script src="/js/script.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
-
 </html>
->>>>>>> 1c12f1f (Homepage Developent)
+>>>>>>> origin/main
