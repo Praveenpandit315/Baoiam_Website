@@ -1,15 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#fff;
-}
-
-footer{
+.footer{
     background:#081325;
     color:#fff;
     width:100%;
@@ -30,7 +19,7 @@ footer{
     width:280px;
 }
 
-.logo{
+.footer-logo{
     width:240px;
     margin-bottom:20px;
     height:auto;
