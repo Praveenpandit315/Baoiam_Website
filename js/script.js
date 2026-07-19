@@ -1,47 +1,210 @@
-/* Button Click */
-const buttons=document.querySelectorAll("a");
+/*======================================================
+                BAOIAM - OUR INSIGHTS
+======================================================*/
 
-buttons.forEach(btn=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-btn.addEventListener("click",function(e){
+    console.log("Our Insights Page Loaded Successfully");
 
-e.preventDefault();
+    /*=========================================
+            SCROLL REVEAL ANIMATION
+    =========================================*/
 
-alert("Coming Soon");
+    const sections = document.querySelectorAll("section");
 
-});
+    const observer = new IntersectionObserver((entries) => {
 
-});
+        entries.forEach(entry => {
 
-/* Gallery Animation */
+            if (entry.isIntersecting) {
 
-const image=document.querySelector(".item");
+                entry.target.classList.add("show-section");
 
-image.addEventListener("mouseenter",()=>{
+            }
 
-image.style.transform="scale(1.02)";
+        });
 
-});
+    }, {
+        threshold: 0.2
+    });
 
-image.addEventListener("mouseleave",()=>{
-
-image.style.transform="scale(1)";
-
-});
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
 
-/* Scroll Reveal */
-const card = document.querySelector(".shadow-xl");
+    /*=========================================
+            GALLERY IMAGE HOVER
+    =========================================*/
 
-window.addEventListener("scroll", () => {
+    const gallery = document.querySelector(".gallery-card");
 
-    const top = card.getBoundingClientRect().top;
+    if (gallery) {
 
-    if (top < window.innerHeight - 100) {
+        gallery.addEventListener("mouseenter", () => {
 
-        card.classList.add("opacity-100", "translate-y-0");
+            gallery.style.transform = "translateY(-10px)";
+
+        });
+
+        gallery.addEventListener("mouseleave", () => {
+
+            gallery.style.transform = "translateY(0px)";
+
+        });
 
     }
 
-});
 
+    /*=========================================
+            LOGO HOVER EFFECT
+    =========================================*/
+
+    const logos = document.querySelectorAll(".logo-item");
+
+    logos.forEach((logo) => {
+
+        logo.addEventListener("mouseenter", () => {
+
+            logo.style.transition = ".3s";
+            logo.style.transform = "translateY(-10px)";
+
+        });
+
+        logo.addEventListener("mouseleave", () => {
+
+            logo.style.transform = "translateY(0px)";
+
+        });
+
+    });
+
+
+    /*=========================================
+            COMPANY LOGO EFFECT
+    =========================================*/
+
+    const companyLogos = document.querySelectorAll(".company-logo");
+
+    companyLogos.forEach((logo) => {
+
+        logo.addEventListener("mouseenter", () => {
+
+            logo.style.transition = ".3s";
+            logo.style.transform = "scale(1.05)";
+
+        });
+
+        logo.addEventListener("mouseleave", () => {
+
+            logo.style.transform = "scale(1)";
+
+        });
+
+    });
+
+
+    /*=========================================
+            SMOOTH SCROLL
+    =========================================*/
+
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target) {
+
+                target.scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /*=========================================
+            IMAGE LOADING EFFECT
+    =========================================*/
+
+    const images = document.querySelectorAll("img");
+
+    images.forEach(img => {
+
+        img.addEventListener("load", () => {
+
+            img.style.opacity = "1";
+
+        });
+
+    });
+
+
+    /*=========================================
+            SCROLL TO TOP BUTTON
+            (Optional)
+    =========================================*/
+
+    const topButton = document.createElement("button");
+
+    topButton.innerHTML = "↑";
+
+    topButton.id = "topBtn";
+
+    document.body.appendChild(topButton);
+
+    topButton.style.cssText = `
+        position:fixed;
+        right:25px;
+        bottom:25px;
+        width:50px;
+        height:50px;
+        border:none;
+        border-radius:50%;
+        background:#ff6b00;
+        color:#fff;
+        font-size:22px;
+        cursor:pointer;
+        display:none;
+        z-index:1000;
+        box-shadow:0 10px 25px rgba(0,0,0,.2);
+        transition:.3s;
+    `;
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+
+            topButton.style.display = "block";
+
+        } else {
+
+            topButton.style.display = "none";
+
+        }
+
+    });
+
+    topButton.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
