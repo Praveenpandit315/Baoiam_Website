@@ -1,96 +1,197 @@
-/*======================================================
-                    GLOBAL CSS
-======================================================*/
+/* =========================================
+   GOOGLE FONT
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================
+   SECTION WRAPPER
+========================================= */
+
+.insights{
+    padding:90px 0;
+    font-family:'Poppins',sans-serif;
+    background:#fafafa;
+    color:#111;
 }
 
-html {
-    scroll-behavior: smooth;
+.insights .container{
+    width:90%;
+    max-width:1300px;
+    margin:0 auto;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    background: #f8f8f8;
-    overflow-x: hidden;
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-/*======================================================
-                SECTION ANIMATION
-======================================================*/
-
-section {
-    animation: fadeUp 1s ease;
+.section-heading h1{
+    font-size:72px;
+    font-weight:900;
+    color:#111;
+    line-height:1.1;
+    letter-spacing:-2px;
+    margin-bottom:20px;
 }
 
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
+.section-heading h1 span{
+    color:#ff6b00;
 }
 
-/*======================================================
-                    GALLERY
-======================================================*/
-
-.gallery-card {
-    border-radius: 28px;
-    overflow: hidden;
-    background: #ffffff;
-    transition: all .5s ease;
+.section-heading p{
+    max-width:680px;
+    margin:20px auto 0;
+    color:#444;
+    font-size:20px;
+    line-height:1.6;
+    font-weight:400;
 }
 
-.gallery-card img {
-    display: block;
-    width: 100%;
-    transition: transform .6s ease;
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:35px;
+    flex-wrap:wrap;
 }
 
-.gallery-card:hover img {
-    transform: scale(1.03);
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s ease;
 }
 
-.gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0,0,0,.18);
+.white-btn{
+    background:#fff;
+    color:#222;
+    border:2px solid #ff6b00;
+    padding:16px 34px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:600;
 }
- /*university*/
- /* ==========================
+
+.white-btn:hover{
+    background:#ff6b00;
+    color:#fff;
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+}
+
+.gallery .item{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    cursor:pointer;
+
+    opacity:0;
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        box-shadow .4s ease;
+}
+
+.gallery .item.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.gallery .item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.gallery .item.active{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.gallery .item img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:20px;
+    transition:transform .5s ease;
+}
+
+.gallery .item:hover img{
+    transform:scale(1.03);
+}
+
+/* =========================================
+   GALLERY OVERLAY
+========================================= */
+
+.gallery .item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.45)
+    );
+    opacity:0;
+    transition:.4s;
+}
+
+.gallery .item:hover::before{
+    opacity:1;
+}
+
+/* =========================================
    UNIVERSITY SECTION
-========================== */
+========================================= */
 
 .university{
-
     padding:80px 0;
-
     margin-top:60px;
-
     background:#fff;
+    font-family:'Poppins',sans-serif;
+}
 
-    padding:80px 0;
-
+.university .container{
+    width:90%;
+    max-width:1300px;
+    margin:0 auto;
 }
 
 .university .section-heading{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
 
 .university .section-heading h1{
     font-size:52px;
     font-weight:700;
-    color:#000000;
+    color:#111;
+    line-height:1.2;
 }
 
 .university .section-heading span{
@@ -100,69 +201,75 @@ section {
 .university .section-heading p{
     width:650px;
     max-width:90%;
-    margin:18px auto;
+    margin:18px auto 0;
     color:#666;
     font-size:17px;
     line-height:28px;
 }
 
-
-/* ==========================
+/* =========================================
    UNIVERSITY LOGO SLIDER
-========================== */
+========================================= */
 
 .logo-slider{
-
-    width:100%;
-
-    overflow:hidden;
-
-    margin:40px auto;
-
     position:relative;
-
+    margin-top:50px;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    overflow:hidden;
 }
-
 .logo-track{
-
     display:flex;
-
     align-items:center;
-
-    gap: 70px;
-
+    gap:70px;
     width:max-content;
-
+    flex-wrap:nowrap;
     animation:logoScroll 20s linear infinite;
 }
+/* 
+.logo-slider:hover .logo-track{
+    animation-play-state:paused;
+} */
+
+/* =========================================
+   UNIVERSITY LOGOS
+========================================= */
 
 .logo-track img{
 
-    width:95px;
-
-    height:95px;
+    width:90px;
+    height:90px;
 
     object-fit:contain;
 
     flex-shrink:0;
 
+    display:block;
+
     background:transparent;
 
-    transition:0.5s ease;
+    border:none;
 
+    box-shadow:none;
+
+    padding:0;
+
+    transition:
+        transform .4s ease;
 }
 
 .logo-track img:hover{
 
-    transform:scale(1.1);
+    transform:
+        translateY(-8px)
+        scale(1.08);
 
 }
 
- .logo-slider:hover .logo-track{
+/* =========================================
+   LOGO ANIMATION
+========================================= */
 
-    animation-play-state:paused;
-
-}
 @keyframes logoScroll{
 
     from{
@@ -179,346 +286,280 @@ section {
 
 }
 
-/* Scrollbar for University */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-.logo-track::-webkit-scrollbar{
+@media (max-width:992px){
 
-    height:8px;
+    .university .section-heading h1{
 
-}
+        font-size:42px;
 
-.logo-track::-webkit-scrollbar-track{
+    }
 
-    background:#eeeeee;
+    .logo-track{
 
-    border-radius:10px;
+        gap:55px;
 
-}
-
-.logo-track::-webkit-scrollbar-thumb{
-
-    background:#ff6600;
-
-    border-radius:10px;
+    }
 
 }
 
-.logo-track::-webkit-scrollbar-thumb:hover{
+@media (max-width:768px){
 
-    background:#e65c00;
+    .university{
+
+        padding:60px 0;
+
+    }
+
+    .university .section-heading h1{
+
+        font-size:34px;
+
+    }
+
+    .university .section-heading p{
+
+        font-size:16px;
+
+        line-height:26px;
+
+    }
+
+    .logo-track{
+
+        gap:40px;
+
+    }
+
+    .logo-track img{
+
+        width:70px;
+        height:70px;
+
+    }
 
 }
 
-.logo-track img{
+@media (max-width:480px){
 
-    width:90px;
-    height:90px;
+    .logo-track{
 
-    object-fit:contain;
+        gap:28px;
 
-    background:#fff;
+    }
 
-    padding:10px;
+    .logo-track img{
 
-    border-radius:12px;
+        width:60px;
+        height:60px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-    flex-shrink:0;
+    }
 
 }
 
-.logo-track img:hover{
+/* =========================================
+   PRESTIGE NETWORK SECTION
+========================================= */
 
-    transform:translateY(-8px) scale(1.08);
+.network{
+    margin-top:40px;
+    padding:80px 0;
+    background:#D9D9D933;
+    font-family:'Poppins',sans-serif;
+}
+
+.network .container{
+    width:90%;
+    max-width:1300px;
+    margin:0 auto;
+}
+
+.network .section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.network .section-heading h1{
+    font-size:52px;
+    font-weight:700;
+    color:#111;
+    line-height:1.2;
+}
+
+.network .section-heading span{
+    color:#ff6b00;
+}
+
+.network .section-heading p{
+    width:650px;
+    max-width:90%;
+    margin:18px auto 0;
+    color:#666;
+    font-size:17px;
+    line-height:28px;
+}
+
+/* =========================================
+   COMPANY SLIDER
+========================================= */
+
+.company-slider{
+    overflow:hidden;
+    position:relative;
+    margin-top:50px;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
 
 }
-.logo-track,
+
 .company-track{
-
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
-
-    gap:45px;
-
+    gap:70px;
+    width:max-content;
+    flex-wrap:nowrap;
+    animation:companyScroll 22s linear infinite;
 }
 
-.logo-track img{
+/* .company-slider:hover .company-track{
+    animation-play-state:paused;
+} */
 
-    width:90px;
-    height:90px;
-
-    object-fit:contain;
-
-    background:transparent;
-
-    padding:0;
-
-    border:none;
-
-    border-radius:0;
-
-    box-shadow:none;
-
-    transition:0.5s ease;
-
-    cursor:pointer;
-
-}
+/* =========================================
+   COMPANY LOGOS
+========================================= */
 
 .company-track img{
 
-    width:160px;
+    width:150px;
     height:70px;
 
     object-fit:contain;
 
-    background:transparent;
+    flex-shrink:0;
 
-    padding:0;
+    display:block;
+
+    background:transparent;
 
     border:none;
 
-    border-radius:0;
-
     box-shadow:none;
 
-    transition:0.3s ease;
+    padding:0;
+
+    transition:transform .35s ease;
 
     cursor:pointer;
-
 }
 
-.logo-track img:hover,
 .company-track img:hover{
 
-    transform:translateY(-8px) scale(1.05);
+    transform:
+        translateY(-8px)
+        scale(1.05);
 
 }
 
-/*network*/
-/*============ GOOGLE FONT ============*/
+/* =========================================
+   COMPANY ANIMATION
+========================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+@keyframes companyScroll{
 
-body{
+    from{
 
-    font-family:'Poppins',sans-serif;
-    background:#ffffff;
-}
+        transform:translateX(0);
 
-/*============ SECTION ============*/
+    }
 
-.ecosystem{
+    to{
 
-    padding:90px 20px;
-    background:#f5f5f5;
-}
+        transform:translateX(-50%);
 
-.container{
-
-    max-width:1200px;
-    margin:auto;
-    text-align:center;
-}
-
-/*============ HEADING ============*/
-
-h2{
-
-    font-size:58px;
-    font-weight:800;
-    color:#111;
-    line-height:1.15;
-}
-
-h2 span{
-
-    display:block;
-    color:#ff6b00;
-}
-
-/*============ PARAGRAPH ============*/
-
-p{
-
-    margin:22px auto 60px;
-    max-width:700px;
-
-    color:#555;
-    font-size:20px;
-    line-height:1.7;
-}
-
-/*============ LOGO SLIDER ============*/
-
-.logo-slider{
-
-    overflow:hidden;
-    position:relative;
-}
-
-.logo-track{
-
-    display:flex;
-    align-items:center;
-    gap:80px;
-
-    width:max-content;
-
-    animation:scroll 24s linear infinite;
-}
-
-.logo-slider:hover .logo-track{
-
-    animation-play-state:paused;
-}
-
-.logo-item{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-width:150px;
-    height:80px;
-
-    transition:.4s;
-}
-
-.logo-item img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    transition:.4s;
-}
-
-.logo-item:hover{
-
-    transform:translateY(-8px);
-}
-
-.logo-item:hover img{
-
-    transform:scale(1.08);
-}
-
-/*============ ANIMATION ============*/
-
-@keyframes scroll{
-
-from{
-
-transform:translateX(0);
+    }
 
 }
 
-to{
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-transform:translateX(-50%);
+@media (max-width:992px){
 
-}
+    .network .section-heading h1{
 
-}
+        font-size:42px;
 
-/*============ RESPONSIVE ============*/
+    }
 
-@media(max-width:992px){
+    .company-track{
 
-h2{
+        gap:55px;
 
-font-size:45px;
+    }
 
-}
+    .company-track img{
 
-p{
+        width:130px;
+        height:60px;
 
-font-size:18px;
-
-}
-
-.logo-track{
-
-gap:50px;
+    }
 
 }
 
-.logo-item{
+@media (max-width:768px){
 
-min-width:130px;
+    .network{
 
-}
+        padding:60px 0;
 
-}
+    }
 
-@media(max-width:768px){
+    .network .section-heading h1{
 
-.ecosystem{
+        font-size:34px;
 
-padding:70px 15px;
+    }
 
-}
+    .network .section-heading p{
 
-h2{
+        font-size:16px;
+        line-height:26px;
 
-font-size:36px;
+    }
 
-}
+    .company-track{
 
-p{
+        gap:40px;
 
-font-size:16px;
+    }
 
-margin-bottom:40px;
+    .company-track img{
 
-}
+        width:110px;
+        height:55px;
 
-.logo-track{
-
-gap:35px;
-
-}
-
-.logo-item{
-
-min-width:110px;
-height:70px;
+    }
 
 }
 
-}
+@media (max-width:480px){
 
-@media(max-width:480px){
+    .company-track{
 
-h2{
+        gap:28px;
 
-font-size:30px;
+    }
 
-}
+    .company-track img{
 
-.logo-track{
+        width:90px;
+        height:45px;
 
-gap:25px;
-
-}
-
-.logo-item{
-
-min-width:90px;
-height:60px;
-
-}
+    }
 
 }
