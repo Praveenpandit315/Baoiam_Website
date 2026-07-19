@@ -20,7 +20,7 @@ body{
    CONTAINER
 ========================================= */
 
-.container{
+.containz{
     width:100%;
     max-width:1400px;
     padding:0 20px;
@@ -42,19 +42,20 @@ body{
 .small-title{
     text-align:center;
     color:#FF6600;
-    font-size:22px;
+    font-size:28px;
     font-weight:700;
     letter-spacing:-2px;
+    font-style: bold;
 }
 
 .main-title{
     text-align:center;
-    font-size:28.84px;
-    font-weight:700;
+    font-size:22px;
+    font-weight:600;
     margin-top:10px;
     line-height:100%;
     letter-spacing: -2%;
-    font-style: bold;
+    font-style: semi-bold;
 }
 
 .main-title span{
@@ -125,7 +126,7 @@ body{
 
 .cardx-img img{
 
-    width:100%;
+    width:90%;
     max-width:470px;
     height:auto;
 
@@ -153,8 +154,8 @@ body{
 
 .cardx h3{
 
-    font-size:22px;
-    font-weight:700;
+    font-size:18px;
+    font-weight:800;
 
     margin-top:0px;
 
@@ -163,6 +164,12 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    max-width: 250px;
+    max-height: 18px;
+    top: 1521px;
+    left: 612px;
+
+
 
 }
 .cardx p{
@@ -171,10 +178,10 @@ body{
 
     line-height:1.8;
 
-    color:#333;
+    color:black;
 
     font-weight: 400;
-    font-size: 17px;
+    font-size: 15px;
     
     padding:0 10px;
 
@@ -183,78 +190,69 @@ body{
    ACCREDITATION
 ========================================= */
 
-.accreditation-section{
-    width:100%;
-    background: #D9D9D933 20%;
+.recognized-section{
+    background:rgba(217, 217, 217, 0.2);
 
+    max-width: 1439px;
+    max-height:277px;
+    top: 716px;
+    left: 1px;
+    opacity: 1;
     padding:20px 0;
+    display: flex;
+     justify-content: center;
+      align-items: center;
 }
 
-.accreditation-section .container{
-    max-width:1400px;
-    margin: auto;
-    padding:0 40px;
+.recognized-section .containz{
+    
+    max-width: 1142px;
+   max-height: 100%;
+    top: 771px;
+    left: 149px;
+    gap: 40px;
+    display: grid;
+
 }
 
-.accreditation{
+.recognized{
 
     text-align:center;
+    margin-left: 40px;
+    margin-right: 40px;
+    
 
 }
 
-.accreditation h2{
-
-    font-size:45px;
+.recognized h2{
+    
+    font-size:40px;
 
     font-weight:700;
+    max-width: 1142px;
+    max-height: 60px;
 
     font-family:'Poppins',sans-serif;
-
+    
 }
 
-.accreditation span{
+.recognized span{
 
     color:#FF6600;
 
 }
 
-/* =========================================
-   LOGOS
-========================================= */
 
-.logos{
+.recognized p{
+    text-align:center;
+    font-size:28px;
+    color:black;
+    font-weight: 400;
+    font-style: bold;
+    line-height: 100%;
+    max-width: 1142px;
+    max-height: 68px;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:90px;
-
-    margin-top:20px;
-
-    flex-wrap:wrap;
-
-}
-
-/* Individual Logo Sizes */
-
-.india-logo{
-
-    width:90px;
-
-}
-
-.startup-logo{
-    margin-left: 25px;
-    max-width:220px;
-
-}
-
-.iso-logo{
-
-    max-width:150px;
 
 }
 
