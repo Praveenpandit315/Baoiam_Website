@@ -8,12 +8,20 @@
 <link rel="stylesheet" href="./CSS/navbar.css">
 <link rel="stylesheet" href="./CSS/hero.css">
 <link rel="stylesheet" href="./CSS/whybaoiam.css">
+<link rel="stylesheet" href="css/course_pages.css">
+<link rel="stylesheet" href="css/bootcamp.css">
 <link rel="stylesheet" href="./CSS/standout.css">
 <link rel="stylesheet" href="./CSS/Ourinsight.css">
+<link rel="stylesheet" href="/css/roadmap.css">
 <link rel="stylesheet" href="./CSS/testimonial.css">
 <link rel="stylesheet" href="./CSS/faq.css">
 <link rel="stylesheet" href="./CSS/cta.css">
 <link rel="stylesheet" href="./CSS/footer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!-- Font Awesome (real icons instead of emoji) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -122,9 +130,9 @@ tailwind.config = {
 
         <!-- main heading -->
         <h1 class="hero-heading">
-          Learn. Build.
-          <span class="hero-heading-rotator" aria-hidden="true"><span class="hero-heading-orange rotator-word" id="rotatorWord">Get Skilled</span></span>
-          <span class="sr-only">Learn. Build. Get skilled, certified, mentored, job-ready, placed, and hired.</span>
+         Learn Skills. Build Experience.<br>
+          Get <span class="hero-heading-rotator" aria-hidden="true"><span class="hero-heading-orange rotator-word" id="rotatorWord">Career Ready.</span></span>
+          <span class="sr-only">Learn Skills. Build Experience. Get Career Ready, Industry Ready, and Placement Ready.</span>
         </h1>
 
         <!-- paragraph -->
@@ -243,34 +251,27 @@ tailwind.config = {
     <!-- /hero-wrapper -->
   </section>
   <!-- ===================== END HERO SECTION ===================== -->
-
     <!-- ========================= -->
     <!-- ACCREDITATION -->
     <!-- ========================= -->
 
-    <section class="accreditation-section">
+    <section class="recognized-section">
 
-        <div class="container">
+        <div class="containz">
 
-            <div class="accreditation">
+            <div class="recognized">
 
                 <h2>
-                    We are
-                    <span>accredited</span>
-                    by
+                    Recognised by 
+                    <span>Leading Institutions</span>
+                     & Industry
                 </h2>
 
             </div>
 
-            <div class="logos">
-
-                <img src="/assets/images/in.png" alt="Government of India">
-
-                <img src="/assets/images/sti.png" class="startup-logo" alt="Startup India">
-
-                <img src="/assets/images/is0.png" alt="ISO Certification">
-
-            </div>
+           <div class="recognized">
+               <p>Our certifications, academic collaborations, and industry partnerships ensure you learn skills that are valued by employers across sectors.</p>
+           </div>
 
         </div>
 
@@ -280,16 +281,15 @@ tailwind.config = {
   <!--=======================WHy BAoiam SEcTIOn =======================-->
      <section class="feature-section">
 
-        <div class="container">
+        <div class="containz">
 
-            <p class="small-title">
-                WHY CHOOSE BAOIAMS?
+            <h2 class="small-title">
+                Why Thousands Choose BAOIAM to Build Their Careers
+            </h2>
+
+            <p class="main-title">
+                We don't just teach concepts—we prepare you for the real world through practical learning, expert mentorship, internships, and career guidance.
             </p>
-
-            <h1 class="main-title">
-                Everything You Need to
-                <span>Succeed</span>
-            </h1>
 
             <div class="divider"></div>
 
@@ -303,10 +303,10 @@ tailwind.config = {
                         <img src="/assets/images/img3.png" alt="Industry Recognized">
                     </div>
 
-                    <h3>Industry Recognized</h3>
+                    <h3>Industry-Relevant Curriculum</h3>
 
                     <p>
-                        Earn certificates that employers trust and value.
+                        Learn the latest tools, technologies, and practical skills designed around today's hiring trends—not outdated theory.
                     </p>
 
                 </div>
@@ -319,10 +319,10 @@ tailwind.config = {
                         <img src="/assets/images/img2.png" alt="Learn Anytime">
                     </div>
 
-                    <h3>Learn Anytime</h3>
+                    <h3>Learn from Industry Experts</h3>
 
                     <p>
-                        Access courses anytime, anywhere on any device.
+                       Attend live sessions led by experienced professionals who have worked with startups and global companies.
                     </p>
 
                 </div>
@@ -335,10 +335,10 @@ tailwind.config = {
                         <img src="assets/images/img1.png" alt="Interactive Community">
                     </div>
 
-                    <h3>Interactive Community</h3>
+                    <h3>Hands-on Projects</h3>
 
                     <p>
-                        Connect, collaborate and grow with a global community.
+                        Build an impressive portfolio by solving real business problems and completing practical projects.
                     </p>
 
                 </div>
@@ -348,42 +348,682 @@ tailwind.config = {
         </div>
 
     </section>
+
+
+
 <!-- =========================
-     OUR INSIGHTS
+     OUR COURSES
 ========================= -->
 
-<section class="bg-gray-100 py-20">
 
-    <div class="max-w-7xl mx-auto px-6">
+<section class="course_wrapper">
 
-        <div class="bg-gray-100 rounded-3xl shadow-xl p-10">
+  <!-- Heading -->
+  <h2 class="course_heading">
+    <span class="course_heading_row">
+      Our <span class="course_brand">Courses</span>
+      <img src="assets/images/course_heading_sparkle.png" alt="" class="course_heading_sparkle">
 
-            <div class="text-center">
+    </span>
+  </h2>
+ <br>
 
-                <h1 class="text-5xl font-extrabold text-gray-900">
-                    Our <span class="text-orange-500">Insights</span>
+  <!-- Cream panel that holds everything -->
+  <div class="course_panel">
+
+    <!-- Tabs — clicking one shows the matching .course_block below -->
+    <div class="course_tabs" id="course_tabs">
+      <button data-cat="marketing" class="course_tab">
+        <i class="fa-solid fa-bullhorn"></i>
+        Digital Marketing & Freelancing
+        <i class="course_tab_line"></i>
+      </button>
+      <button data-cat="productivity" class="course_tab">
+        <i class="fa-solid fa-bolt"></i>
+        AI Productivity & Career
+        <i class="course_tab_line"></i>
+      </button>
+      <button data-cat="data" class="course_tab">
+        <i class="fa-solid fa-chart-column"></i>
+        Data Analytics with AI
+        <i class="course_tab_line"></i>
+      </button>
+      <button data-cat="cyber" class="course_tab">
+        <i class="fa-solid fa-shield-halved"></i>
+        Cybersecurity + AI Security
+        <i class="course_tab_line"></i>
+      </button>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- COURSE 1: Digital Marketing & Freelancing                        -->
+    <!-- ================================================================ -->
+    <div class="course_block" data-cat="marketing">
+
+      <div class="course_left_card">
+        <span class="course_dots" style="top:20px;left:20px;width:64px;height:64px;border-radius:9999px;"></span>
+        <span class="course_dots" style="bottom:20px;left:20px;width:80px;height:80px;border-radius:9999px;"></span>
+
+        <div class="course_row_top">
+          <div class="course_icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3 class="course_title">AI-Powered Digital Marketing & Freelancing</h3>
+        </div>
+
+        <p class="course_desc">Master SEO, social media, content marketing, and paid advertising to grow brands and drive measurable business results.</p>
+
+        <div class="course_stats">
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-sack-dollar"></i>$45K</div>
+            <div class="course_stat_label">Avg. Starting Salary</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-clock"></i>3.5 mo</div>
+            <div class="course_stat_label">Avg. Time to Hire</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-star"></i>4.8</div>
+            <div class="course_stat_label">Student Rating</div>
+          </div>
+        </div>
+
+        <h4 class="course_subtitle">Technologies You'll Learn</h4>
+        <div class="course_tags">
+          <div class="course_tag"><i class="fa-solid fa-robot"></i><span>ChatGPT</span></div>
+          <div class="course_tag"><i class="fa-solid fa-magnifying-glass-chart"></i><span>SEO</span></div>
+          <div class="course_tag"><i class="fa-brands fa-meta"></i><span>Meta Ads</span></div>
+          <div class="course_tag"><i class="fa-solid fa-palette"></i><span>Canva AI</span></div>
+          <div class="course_tag"><i class="fa-solid fa-pen-nib"></i><span>Copywriting</span></div>
+          <div class="course_tag"><i class="fa-solid fa-briefcase"></i><span>Freelancing</span></div>
+        </div>
+
+        <button class="course_explore_btn">
+          Explore More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="course_right_card">
+        <span class="course_dots" style="top:20px;right:20px;width:96px;height:80px;"></span>
+
+        <div class="course_module_top">
+          <div class="course_module_circle"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Learning Modules</h3>
+        </div>
+        <div class="course_module_info">
+          <span><i class="fa-solid fa-book"></i> 6 modules</span>
+          <span class="course_module_sep">|</span>
+          <span>26 hours</span>
+          <span class="course_module_sep">|</span>
+          <span><i class="fa-solid fa-code"></i> 8 Projects</span>
+        </div>
+
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">01</span>
+            <span class="course_module_name">AI Tools for Content Creation</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">02</span>
+            <span class="course_module_name">SEO & Keyword Research with AI</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>4h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">03</span>
+            <span class="course_module_name">Meta & Google Ads Basics</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">04</span>
+            <span class="course_module_name">AI-Assisted Copywriting</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>4h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">05</span>
+            <span class="course_module_name">Building a Freelance Profile</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>4h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">06</span>
+            <span class="course_module_name">Landing Your First Client</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>4h</span>
+        </div>
+
+        <button class="course_cta">
+          <div class="course_cta_icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="course_cta_text">
+            <div class="course_cta_title">Build. Deploy. Get Hired.</div>
+            <div class="course_cta_desc">Real-World projects to boost your portfolio.</div>
+          </div>
+          <i class="fa-solid fa-chevron-right course_cta_arrow"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- COURSE 2: Productivity & Career Accelerator                      -->
+    <!-- ================================================================ -->
+    <div class="course_block" data-cat="productivity">
+
+      <div class="course_left_card">
+        <span class="course_dots" style="top:20px;left:20px;width:64px;height:64px;border-radius:9999px;"></span>
+        <span class="course_dots" style="bottom:20px;left:20px;width:80px;height:80px;border-radius:9999px;"></span>
+
+        <div class="course_row_top">
+          <div class="course_icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="course_title">AI Productivity & Career Accelerator</h3>
+        </div>
+
+        <p class="course_desc">This course helps learners harness AI tools to boost efficiency and automate workflows with career-focused strategies like AI-powered communication, networking, and future-ready skill development..</p>
+
+        <div class="course_stats">
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-sack-dollar"></i>$107K</div>
+            <div class="course_stat_label">Avg. Starting Salary</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-clock"></i>6.0 mo</div>
+            <div class="course_stat_label">Avg. Time to Hire</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-star"></i>4.5</div>
+            <div class="course_stat_label">Student Rating</div>
+          </div>
+        </div>
+
+        <h4 class="course_subtitle">Technologies You'll Learn</h4>
+        <div class="course_tags">
+          <div class="course_tag"><i class="fa-solid fa-robot"></i><span>ChatGPT</span></div>
+          <div class="course_tag"><i class="fa-solid fa-note-sticky"></i><span>Notion AI</span></div>
+          <div class="course_tag"><i class="fa-solid fa-diagram-project"></i><span>Automation</span></div>
+          <div class="course_tag"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Prompt Engineering</span></div>
+          <div class="course_tag"><i class="fa-brands fa-google"></i><span>Google Workspace</span></div>
+          <div class="course_tag"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></div>
+        </div>
+
+        <button class="course_explore_btn">
+          Explore More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="course_right_card">
+        <span class="course_dots" style="top:20px;right:20px;width:96px;height:80px;"></span>
+
+        <div class="course_module_top">
+          <div class="course_module_circle"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Learning Modules</h3>
+        </div>
+        <div class="course_module_info">
+          <span><i class="fa-solid fa-book"></i> 6 modules</span>
+          <span class="course_module_sep">|</span>
+          <span>40 hours</span>
+          <span class="course_module_sep">|</span>
+          <span><i class="fa-solid fa-code"></i> 8 Projects</span>
+        </div>
+
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">01</span>
+            <span class="course_module_name">Productivity Foundation</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>7h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">02</span>
+            <span class="course_module_name">AI Tools for Work</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>7h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">03</span>
+            <span class="course_module_name">Smart Task Automation</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">04</span>
+            <span class="course_module_name">Career Growth Strategies</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>7h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">05</span>
+            <span class="course_module_name">AI-Powered Networking</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">06</span>
+            <span class="course_module_name">Future of Work Readiness</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>7h</span>
+        </div>
+
+        <button class="course_cta">
+          <div class="course_cta_icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="course_cta_text">
+            <div class="course_cta_title">Build. Deploy. Get Hired.</div>
+            <div class="course_cta_desc">Real-World projects to boost your portfolio.</div>
+          </div>
+          <i class="fa-solid fa-chevron-right course_cta_arrow"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- COURSE 3: Data Analytics with AI                                 -->
+    <!-- ================================================================ -->
+    <div class="course_block" data-cat="data">
+
+      <div class="course_left_card">
+        <span class="course_dots" style="top:20px;left:20px;width:64px;height:64px;border-radius:9999px;"></span>
+        <span class="course_dots" style="bottom:20px;left:20px;width:80px;height:80px;border-radius:9999px;"></span>
+
+        <div class="course_row_top">
+          <div class="course_icon"><i class="fa-solid fa-chart-column"></i></div>
+          <h3 class="course_title">Data Analytics with AI</h3>
+        </div>
+
+        <p class="course_desc">Master data analysis using Python, SQL, and AI copilots to clean, explore, and visualize data for real business decisions.</p>
+
+        <div class="course_stats">
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-sack-dollar"></i>$68K</div>
+            <div class="course_stat_label">Avg. Starting Salary</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-clock"></i>5.5 mo</div>
+            <div class="course_stat_label">Avg. Time to Hire</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-star"></i>4.9</div>
+            <div class="course_stat_label">Student Rating</div>
+          </div>
+        </div>
+
+        <h4 class="course_subtitle">Technologies You'll Learn</h4>
+        <div class="course_tags">
+          <div class="course_tag"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="course_tag"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+          <div class="course_tag"><i class="fa-solid fa-chart-pie"></i><span>Power BI</span></div>
+          <div class="course_tag"><i class="fa-solid fa-table"></i><span>Excel</span></div>
+          <div class="course_tag"><i class="fa-solid fa-robot"></i><span>AI Copilot</span></div>
+          <div class="course_tag"><i class="fa-solid fa-chart-line"></i><span>Tableau</span></div>
+        </div>
+
+        <button class="course_explore_btn">
+          Explore More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="course_right_card">
+        <span class="course_dots" style="top:20px;right:20px;width:96px;height:80px;"></span>
+
+        <div class="course_module_top">
+          <div class="course_module_circle"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Learning Modules</h3>
+        </div>
+        <div class="course_module_info">
+          <span><i class="fa-solid fa-book"></i> 6 modules</span>
+          <span class="course_module_sep">|</span>
+          <span>34 hours</span>
+          <span class="course_module_sep">|</span>
+          <span><i class="fa-solid fa-code"></i> 10 Projects</span>
+        </div>
+
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">01</span>
+            <span class="course_module_name">Python for Data Analysis</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">02</span>
+            <span class="course_module_name">SQL for Data Querying</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">03</span>
+            <span class="course_module_name">Data Cleaning with AI Tools</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">04</span>
+            <span class="course_module_name">Dashboards with Power BI</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>6h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">05</span>
+            <span class="course_module_name">Statistics & Probability</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">06</span>
+            <span class="course_module_name">Real-World Case Studies</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+
+        <button class="course_cta">
+          <div class="course_cta_icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="course_cta_text">
+            <div class="course_cta_title">Build. Deploy. Get Hired.</div>
+            <div class="course_cta_desc">Real-World projects to boost your portfolio.</div>
+          </div>
+          <i class="fa-solid fa-chevron-right course_cta_arrow"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- COURSE 4: Cybersecurity Fundamentals + AI Security                -->
+    <!-- ================================================================ -->
+    <div class="course_block" data-cat="cyber">
+
+      <div class="course_left_card">
+        <span class="course_dots" style="top:20px;left:20px;width:64px;height:64px;border-radius:9999px;"></span>
+        <span class="course_dots" style="bottom:20px;left:20px;width:80px;height:80px;border-radius:9999px;"></span>
+
+        <div class="course_row_top">
+          <div class="course_icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="course_title">Cybersecurity Fundamentals + AI Security</h3>
+        </div>
+
+        <p class="course_desc"> This course equips with essential skills to protect digital systems & data. It covers cybersecurity practices & strategies to safeguard against cyber risks.</p>
+
+        <div class="course_stats">
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-sack-dollar"></i>$71K</div>
+            <div class="course_stat_label">Avg. Starting Salary</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-clock"></i>5.5 mo</div>
+            <div class="course_stat_label">Avg. Time to Hire</div>
+          </div>
+          <div class="course_stat">
+            <div class="course_stat_value"><i class="fa-solid fa-star"></i>4.8</div>
+            <div class="course_stat_label">Student Rating</div>
+          </div>
+        </div>
+
+        <h4 class="course_subtitle">Technologies You'll Learn</h4>
+        <div class="course_tags">
+          <div class="course_tag"><i class="fa-solid fa-network-wired"></i><span>Networking</span></div>
+          <div class="course_tag"><i class="fa-solid fa-user-secret"></i><span>Ethical Hacking</span></div>
+          <div class="course_tag"><i class="fa-solid fa-robot"></i><span>AI Threat Detection</span></div>
+          <div class="course_tag"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+          <div class="course_tag"><i class="fa-solid fa-key"></i><span>Cryptography</span></div>
+          <div class="course_tag"><i class="fa-solid fa-desktop"></i><span>SOC Tools</span></div>
+        </div>
+
+        <button class="course_explore_btn">
+          Explore More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="course_right_card">
+        <span class="course_dots" style="top:20px;right:20px;width:96px;height:80px;"></span>
+
+        <div class="course_module_top">
+          <div class="course_module_circle"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Learning Modules</h3>
+        </div>
+        <div class="course_module_info">
+          <span><i class="fa-solid fa-book"></i> 6 modules</span>
+          <span class="course_module_sep">|</span>
+          <span>30 hours</span>
+          <span class="course_module_sep">|</span>
+          <span><i class="fa-solid fa-code"></i> 7 Projects</span>
+        </div>
+
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">01</span>
+            <span class="course_module_name">Cybersecurity Fundamentals</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">02</span>
+            <span class="course_module_name">Network Security Basics</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">03</span>
+            <span class="course_module_name">Introduction to Ethical Hacking</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">04</span>
+            <span class="course_module_name">AI in Threat Detection</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">05</span>
+            <span class="course_module_name">Cryptography Essentials</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+        <div class="course_module_item">
+          <div class="course_module_left">
+            <span class="course_module_num">06</span>
+            <span class="course_module_name">Security Operations (SOC)</span>
+          </div>
+          <span class="course_module_time"><i class="fa-regular fa-clock"></i>5h</span>
+        </div>
+
+        <button class="course_cta">
+          <div class="course_cta_icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="course_cta_text">
+            <div class="course_cta_title">Build. Deploy. Get Hired.</div>
+            <div class="course_cta_desc">Real-World projects to boost your portfolio.</div>
+          </div>
+          <i class="fa-solid fa-chevron-right course_cta_arrow"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--==============================bootcamp course ======================================================
+-->
+
+<!-- =========================
+     OUR BOOTCAMP
+========================= -->
+<section id="bc-section">
+
+        <div class="bc-container">
+
+            <div class="bc-header">
+                <h1>
+                    Career-Focused <span>Bootcamps</span> Designed for
+                    <span>Job Readiness</span>
                 </h1>
 
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    We teach real-world skills, connect you with mentors,
-                    and prepare you to crush the industry.
+                <p>
+                    Intensive learning experiences that combine expert instruction,
+                    practical projects, mentorship, and career support to help you
+                    confidently enter or advance in the workforce.
                 </p>
+            </div>
 
-                <a href="#"
-                   aria-label="Talk to our counsellor"
-                   class="inline-block mt-8 px-8 py-3 border-2 border-orange-500 rounded-lg font-semibold text-gray-700 hover:bg-orange-500 hover:text-white duration-300">
-                    Talk to our Counsellor
-                </a>
+            <div class="bc-grid">
+
+                <div class="bc-preview-card" id="bcLeftCard">
+
+                    <div class="bc-image-container" id="bcImageContainer"></div>
+
+                    <h2 id="bcTitle">
+                        Entrepreneurship &amp; Business Mastery
+                    </h2>
+
+                    <p id="bcDescription">
+                        Master entrepreneurship with modern business strategy,
+                        startup execution, growth marketing, financial planning,
+                        and scalable business systems.
+                    </p>
+
+                    <div class="bc-tags" id="bcTags"></div>
+
+                    <button class="bc-enroll-btn" id="bcEnrollBtn">
+                        Enroll Now - ₹499
+                    </button>
+
+                </div>
+
+                <div class="bc-details">
+
+                    <h3 class="bc-learn-title">
+                        What You'll Achieve!
+                    </h3>
+
+                    <div class="bc-topics-grid" id="bcTopics"></div>
+
+                    <div class="bc-curriculum-box">
+
+                        <h3 id="bcBoxHeading">
+                            By the end of this bootcamp you'll:
+                        </h3>
+
+                        <div class="bc-phase-list" id="bcPhases"></div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="mt-12">
+        </div>
 
-                <img
-                    src="assets/images/Desktop.png"
-                    alt="BAOIAM Insights"
-                    loading="lazy"
-                    class="w-full rounded-2xl shadow-lg">
+    </section>
+
+<!-- =======================================================
+                     OUR INSIGHTS
+======================================================== -->
+
+<section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <!-- Heading -->
+
+        <div class="text-center">
+
+            <h1 class="text-4xl
+                       md:text-6xl
+                       font-extrabold
+                       text-gray-900
+                       leading-tight">
+
+                Learning Beyond the
+
+                <span class="relative inline-block text-orange-500">
+
+                    Classroom
+
+                    <!-- Decorative SVG -->
+
+                    <svg class="absolute
+                                -top-3
+                                -right-8
+                                w-10
+                                h-10"
+
+                         viewBox="0 0 40 40"
+
+                         fill="none"
+
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <path d="M8 12C10 10 13 9 16 8"
+                              stroke="#ff6b00"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <path d="M12 18C16 15 20 14 24 13"
+                              stroke="#ff6b00"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <path d="M18 24C22 22 26 20 31 19"
+                              stroke="#ff6b00"
+                              stroke-width="3"
+                              stroke-linecap="round"/>
+
+                    </svg>
+
+                </span>
+
+            </h1>
+
+            <!-- Description -->
+
+            <p class="mt-8 max-w-3xl mx-auto
+          font-normal
+          text-[19.02px]
+          leading-[100%]
+          tracking-[0]
+          text-center
+          text-[#444444]">
+          
+    From workshops and hackathons to networking events,
+    expert<br> sessions and industry collaborations,
+    our learners experience<br> education that prepares them
+    for real careers.
+
+</p>
+        </div>
+
+        <!-- Gallery -->
+
+        <div class="mt-14">
+
+            <div class="overflow-hidden
+                        rounded-3xl
+                        shadow-xl
+                        hover:shadow-2xl
+                        duration-500">
+
+                <img src="/assets/images/Desktop.png"
+
+                     alt="Learning Beyond the Classroom">
 
             </div>
 
@@ -392,6 +1032,7 @@ tailwind.config = {
     </div>
 
 </section>
+
 
 <style>
 
@@ -437,7 +1078,7 @@ tailwind.config = {
 
             <p class="max-w-3xl mx-auto mt-5 text-gray-600 leading-8 text-lg">
                 We partner with top institutions to deliver
-                world-class learning and exclusive access
+                world-class learning <br> and exclusive access
                 to cutting-edge resources empowering
                 students for tomorrow.
             </p>
@@ -502,6 +1143,311 @@ tailwind.config = {
     </div>
 
 </section>
+<!-- ===================================STANDOUT SECTION=========================================== -->
+<section class="standout-section">
+
+    <div class="standout-container">
+
+        <!-- Header -->
+        <div class="standout-header">
+            <h1>
+                 Why learners Prefer <span class="standout-highlight">BAOIAM </span> Over <br>
+                 Traditional Online Learning
+                </h1>
+
+            <p>
+                Our commitment to quality, dedication and an achievement <br>oriented mindset sets us apart.
+            </p>
+            
+        </div>
+
+        <!-- Table -->
+        <div class="standout-table-container">
+
+            <!-- Features -->
+            <div class="standout-column standout-features-col">
+
+                <div class="standout-col-header">
+                    Features
+                </div>
+
+                <div class="standout-cell standout-text-left">Live Interactive Classes</div>
+                <div class="standout-cell standout-text-left">Personal Career Mentor</div>
+                <div class="standout-cell standout-text-left">Industry Projects</div>
+                <div class="standout-cell standout-text-left">Internships</div>
+                <div class="standout-cell standout-text-left">Resume Building</div>
+                <div class="standout-cell standout-text-left">Mock Interviews</div>
+                <div class="standout-cell standout-text-left">Placement Assistance</div>
+                <div class="standout-cell standout-text-left">Career Community</div>
+                <div class="standout-cell standout-text-left">Lifetime Learning Resources</div>
+                <div class="standout-cell standout-text-left">AI Learning Tools</div>
+
+            </div>
+
+            <!-- Others -->
+
+            <div class="standout-column standout-others-col">
+
+                <div class="standout-col-header">
+                    Others
+                </div>
+
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
+
+            </div>
+
+            <!-- BAOIAM -->
+
+            <div class="standout-column standout-us-col">
+
+                <div class="standout-col-header">
+                    Us
+                </div>
+
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ======================================Roadmap============================================= -->
+ <section class="roadmap-section">
+
+    <!-- Background Decoration -->
+
+    <img src="assets/images/pattern-left.svg"
+        class="roadmap-bg-pattern pattern-left-top"
+        alt="">
+
+    <img src="assets/images/pattern-right.svg"
+        class="roadmap-bg-pattern pattern-right-middle"
+        alt="">
+
+    <img src="assets/images/pattern-left.svg"
+        class="roadmap-bg-pattern pattern-left-middle"
+        alt="">
+
+    <img src="assets/images/pattern-right.svg"
+        class="roadmap-bg-pattern pattern-right-bottom"
+        alt="">
+
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="roadmap-heading">
+
+            <h2>
+
+                Your Career Journey
+
+                <span>Starts</span>
+                Here
+                  <img 
+            src="assets/images/course_heading_sparkle.png"
+            class="heading-accent"
+            alt=""  
+        >
+
+            </h2>
+
+        </div>
+
+
+        <!-- ========================= -->
+
+        <!-- Module 1 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item module-1 reveal">
+
+            <div class="roadmap-content">
+
+                <h3>Module 1: Apply & Get Started</h3>
+
+                <p>
+
+                   Begin your journey by applying to the program, attending the orientation session, & gaining access to all the learning resources & support you need for success.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module1.svg"
+                        alt="Module 1">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-1">
+
+            <img src="assets/images/path1.svg"
+                alt="">
+
+        </div>
+
+
+        <!-- ========================= -->
+
+        <!-- Module 2 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item reverse module-2 reveal">
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module2.svg"
+                        alt="Module 2">
+
+                </div>
+
+            </div>
+
+
+            <div class="roadmap-content">
+
+                <h3>Module 2: Learn & Upskill</h3>
+
+                <p>
+
+                 Develop in-demand skills through expert-led courses, hands-on learning, mentorship, and continuous practice designed to prepare you for the industry.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-2">
+
+            <img src="assets/images/path2.svg"
+                alt="">
+
+        </div>
+
+
+
+        <!-- ========================= -->
+
+        <!-- Module 3 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item module-3 reveal">
+
+            <div class="roadmap-content">
+
+                <h3>Module 3: Build & Prepare</h3>
+
+                <p>
+
+                   Strengthen your portfolio with real-world projects, create a professional resume, & prepare for interviews through mock assessments & career guidance.
+
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module3.svg"
+                        alt="Module 3">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="roadmap-timeline timeline-3">
+
+            <img src="assets/images/path3.svg"
+                alt="">
+
+        </div>
+
+
+
+        <!-- ========================= -->
+
+        <!-- Module 4 -->
+
+        <!-- ========================= -->
+
+        <div class="roadmap-item reverse module-4 reveal">
+
+            <div class="roadmap-image">
+
+                <div class="roadmap-image-wrapper">
+
+                    <img src="assets/images/module4.svg"
+                        alt="Module 4">
+
+                </div>
+
+            </div>
+
+
+            <div class="roadmap-content">
+
+                <h3>Module 4: Get Hired</h3>
+
+                <p>
+
+                    Connect with leading recruiters, explore relevant job opprtunities, receive dedicated placement support, and launch your career with confidence.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- =========================
      PRESTIGE NETWORK
 ========================= -->
@@ -513,14 +1459,14 @@ tailwind.config = {
         <div class="text-center">
 
             <h2 class="text-5xl font-bold">
-                Our
-                <span class="text-orange-500">Prestige</span>
-                Network
+                Learn with an Ecosystem <br>
+                <span class="text-orange-500">
+            <span>Built for Success</span>
             </h2>
 
             <p class="max-w-3xl mx-auto mt-5 text-gray-600 leading-8 text-lg">
                 Alliances with bold startups and global
-                leaders spanning top-tier industries
+                leaders spanning top-tier<br> industries
                 and purpose-driven innovation.
             </p>
 
@@ -615,92 +1561,7 @@ tailwind.config = {
 
 </section>
 
-<section class="standout-section">
-
-    <div class="standout-container">
-
-        <!-- Header -->
-        <div class="standout-header">
-            <h1>
-                Here’s Why <span class="standout-highlight">BAOIAM Stands Out!</span>
-            </h1>
-
-            <p>
-                Our commitment to quality, dedication and an achievement-oriented mindset sets us apart.
-            </p>
-        </div>
-
-        <!-- Table -->
-        <div class="standout-table-container">
-
-            <!-- Features -->
-            <div class="standout-column standout-features-col">
-
-                <div class="standout-col-header">
-                    Features
-                </div>
-
-                <div class="standout-cell standout-text-left">Live Masterclasses by Experts</div>
-                <div class="standout-cell standout-text-left">1-on-1 Mentorship & Career Coaching</div>
-                <div class="standout-cell standout-text-left">Real-World Projects (Minor + Major)</div>
-                <div class="standout-cell standout-text-left">Guaranteed Internship Opportunities</div>
-                <div class="standout-cell standout-text-left">Personalized Career Roadmap</div>
-                <div class="standout-cell standout-text-left">Live Corporate Exposure</div>
-                <div class="standout-cell standout-text-left">Mock Interviews & Skill Assessments</div>
-                <div class="standout-cell standout-text-left">Resume & Portfolio Mastery</div>
-                <div class="standout-cell standout-text-left">Industry Certification</div>
-                <div class="standout-cell standout-text-left">Placement Assistance</div>
-
-            </div>
-
-            <!-- Others -->
-
-            <div class="standout-column standout-others-col">
-
-                <div class="standout-col-header">
-                    Others
-                </div>
-
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-cross">✖</span></div>
-
-            </div>
-
-            <!-- BAOIAM -->
-
-            <div class="standout-column standout-us-col">
-
-                <div class="standout-col-header">
-                    Us
-                </div>
-
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-                <div class="standout-cell"><span class="standout-icon standout-check">✔</span></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================Testimonial========================================== -->
+<!-- =====================================Testimonial========================================== =================-->
 <section class="testimonial-section">
   <h1 class="testimonial-title">Testimonials</h1>
   <p class="testimonial-subtitle">
@@ -713,6 +1574,7 @@ tailwind.config = {
     <div class="testimonial-card testimonial-side-card testimonial-right-card" id="rightCard"></div>
   </div>
 </section>
+<!-- ==============================faq================================================================= -->
 <section class="faq-section">
 
     <!-- Left Side -->
@@ -834,6 +1696,7 @@ tailwind.config = {
     </div>
 
 </section>
+<!-- ==================================== cta =========================================================== -->
 <section class="cta-hero">
 
     <!-- Left -->
@@ -911,103 +1774,129 @@ tailwind.config = {
     </div>
 
 </section>
+<!-- ===================================== FOOTER ===================================================== -->
 <!-- ================= FOOTER ================= -->
 
-<footer>
-
+<footer class="footer">
 <div class="footer-container">
 
-<div class="footer-box logo-box">
+    <!-- Logo -->
+    <div class="footer-box logo-box">
 
-<img src="/assets/images/logo.png" alt="BAIOAM Logo" class="logo">
+        <img src="/assets/images/logo.png" alt="BAIOAM Logo" class="footer-logo">
 
-<p>
-Follow us for the latest updates,<br>
-career insights,<br>
-and program launches.
-</p>
 
-<div class="social-icons">
+    </div>
 
-<a href="#"><i class="fab fa-facebook-f"></i></a>
+    <!-- Top Category -->
+    <div class="footer-box">
 
-<a href="#"><i class="fab fa-instagram"></i></a>
+        <h3>TOP 4 CATEGORY</h3>
 
-<a href="#"><i class="fab fa-linkedin"></i></a>
+        <ul>
+            <li><a href="#">Udaan 90</a></li>
+            <li><a href="#">Success Fusion Program</a></li>
+            <li><a href="#">Pay after Placement</a></li>
+            <li><a href="#">Pride Fusion</a></li>
+        </ul>
 
-<a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
 
-<a href="#"><i class="fab fa-youtube"></i></a>
+    <!-- Quick Access -->
+    <div class="footer-box">
 
-</div>
+        <h3>QUICK ACCESS</h3>
 
-<h3>DOWNLOAD OUR APP</h3>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Become Instructor</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">GCEP</a></li>
+        </ul>
 
-<div class="app-btn">
-<i class="fab fa-apple"></i>
-<div>
-<span>Download now</span>
-<h4>App Store</h4>
-</div>
-</div>
+    </div>
 
-<div class="app-btn">
-<img src="/assets/images/playstore.png" class="play-icon" alt="Play Store">
-<div>
-<span>Download now</span>
-<h4>Play Store</h4>
-</div>
-</div>
+    <!-- Support -->
+    <div class="footer-box">
 
-</div>
+        <h3>SUPPORT</h3>
 
-<div class="footer-box">
+        <ul>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">FAQS</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
 
-<h3>TOP 4 CATEGORY</h3>
-
-<ul>
-<li><a href="#">Udaan 90</a></li>
-<li><a href="#">Success Fusion Program</a></li>
-<li><a href="#">Pay after Placement</a></li>
-</ul>
+    </div>
 
 </div>
 
-<div class="footer-box">
+<!-- Bottom Section -->
 
-<h3>QUICK ACCESS</h3>
+<div class="footer-bottom">
 
-<ul>
-<li><a href="#">About</a></li>
-<li><a href="#">Become Instructor</a></li>
-<li><a href="#">Contact</a></li>
-<li><a href="#">GCEP</a></li>
-</ul>
+    <!-- Download -->
 
-</div>
+    <div class="download-section">
 
-<div class="footer-box">
+        <h3>DOWNLOAD OUR APP</h3>
 
-<h3>SUPPORT</h3>
+        <div class="app-btn">
+            <i class="fab fa-apple"></i>
 
-<ul>
-<li><a href="#">Refund Policy</a></li>
-<li><a href="#">FAQS</a></li>
-<li><a href="#">Terms & Conditions</a></li>
-<li><a href="#">Privacy Policy</a></li>
-</ul>
+            <div>
+                <span>Download now</span>
+                <h4>App Store</h4>
+            </div>
 
-</div>
+        </div>
+
+        <div class="app-btn">
+
+            <img src="/assets/images/playstore.png" class="play-icon">
+
+            <div>
+                <span>Download now</span>
+                <h4>Play Store</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Social -->
+
+    <div class="follow-section">
+
+        <p>Follow us :</p>
+
+        <div class="social-icons">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
 
 </div>
 
 <div class="copyright">
-© 2021 - Designed by <b>Baioam.</b> All rights reserved.
+    © 2021 - Designed by <b>Baioam.</b> All rights reserved.
 </div>
 
-</footer>
 
-<script src="script.js"></script>
+
+</footer>
+<script src="/js/script.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
