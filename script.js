@@ -64,19 +64,15 @@ menu.onclick=function(){
 // the rotating headline word, the stats count-up, and the
 // two button click handlers.
 // =====================================================
-
 var prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
 // ---------- rotating headline word ----------
 var rotatorWords = [
-  "Get Skilled",
-  "Get Certified",
-  "Get Mentored",
-  "Get Job-Ready",
-  "Get Placed",
-  "Get Hired",
+  "Career Ready.",
+  "Industry Ready.",
+  "Placement Ready.",
 ];
 var rotatorEl = document.getElementById("rotatorWord");
 
@@ -206,6 +202,379 @@ if (pathsBtn) {
     console.log("View learning paths button clicked");
   });
 }
+// ================================COURSES =================================
+// ===============================
+// OUR COURSES
+// ===============================
+var ROTATE_INTERVAL = 7500; // auto-rotate every 7.5 seconds
+var CATEGORY_ORDER = ["marketing", "productivity", "data", "cyber"];
+
+var currentIndex = 0;
+var rotateTimer = null;
+
+var tabButtons = document.querySelectorAll(".course_tab");
+var courseBlocks = document.querySelectorAll(".course_block");
+
+/* Show the block for "cat" and hide all the others */
+function showBlock(cat) {
+  for (var i = 0; i < courseBlocks.length; i++) {
+    var block = courseBlocks[i];
+    if (block.dataset.cat === cat) {
+      block.classList.add("course_block_active");
+    } else {
+      block.classList.remove("course_block_active");
+    }
+  }
+}
+
+/* Highlight the active tab and (re)start its progress underline */
+function highlightTab(cat) {
+  for (var i = 0; i < tabButtons.length; i++) {
+    var btn = tabButtons[i];
+    var isActive = btn.dataset.cat === cat;
+
+    if (isActive) {
+      btn.classList.add("course_tab_active");
+    } else {
+      btn.classList.remove("course_tab_active");
+    }
+
+    var line = btn.querySelector(".course_tab_line");
+    line.classList.remove("course_tab_line_running");
+    void line.offsetWidth; // restart the CSS animation cleanly
+
+    if (isActive) {
+      line.style.setProperty("--rotate-duration", ROTATE_INTERVAL + "ms");
+      line.classList.add("course_tab_line_running");
+    } else {
+      line.style.width = "0%";
+    }
+  }
+}
+
+/* Switch to a course by name (called on click and by auto-rotate) */
+function setActiveTab(cat, resetTimer) {
+  if (resetTimer === undefined) {
+    resetTimer = true;
+  }
+
+  highlightTab(cat);
+  showBlock(cat);
+  currentIndex = CATEGORY_ORDER.indexOf(cat);
+
+  if (resetTimer) {
+    restartAutoRotate();
+  }
+}
+
+function goToNextTab() {
+  currentIndex = (currentIndex + 1) % CATEGORY_ORDER.length;
+  setActiveTab(CATEGORY_ORDER[currentIndex], false);
+  startAutoRotate();
+}
+
+function startAutoRotate() {
+  clearTimeout(rotateTimer);
+  rotateTimer = setTimeout(goToNextTab, ROTATE_INTERVAL);
+}
+
+function restartAutoRotate() {
+  clearTimeout(rotateTimer);
+  startAutoRotate();
+}
+
+/* Clicking a tab switches instantly and resets the auto-rotate timer */
+for (var i = 0; i < tabButtons.length; i++) {
+  tabButtons[i].addEventListener("click", function () {
+    setActiveTab(this.dataset.cat, true);
+  });
+}
+
+/* First paint */
+setActiveTab(CATEGORY_ORDER[currentIndex]);
+//==================================Bootcamp courses=====================================================
+//OUR BOOCAMP SECTION
+(() => {
+
+const courseStates = [
+    {
+        id: "entrepreneurship",
+        title: "Entrepreneurship & Business Mastery",
+        boxHeading: "Curriculum Breakdown",
+        description: "Master entrepreneurship with modern business strategy, startup execution, growth marketing, financial planning, and scalable business systems.",
+        imageSrc: "/assets/images/entrepreneurship.png",
+        imageAlt: "Entrepreneurship Course Illustration Graphic",
+        tags: ["100+ Hours", "15+ Projects", "Job Guarantee"],
+        topics: [
+            "Business Model Design & Validation",
+            "Market Research & Customer Validation",
+            "Financial Planning & Business Scaling",
+            "Customer Acquisition Strategies"
+        ],
+        achievements: [
+            { label: "Achieve", detail: "Learn Latest Tools" },
+            { label: "Achieve", detail: "Build 10+ Projects" },
+            { label: "Achieve", detail: "Become Interview Ready" },
+            { label: "Achieve", detail: "Receive Mentor Feedback" }
+        ]
+    },
+    {
+        id: "web-development",
+        title: "Full Stack Web Engineering",
+        boxHeading: "By the end of this bootcamp you'll:",
+        description: "Master the modern MERN stack with advanced architecture, cloud deployment, and system design patterns.",
+        imageSrc: "/assets/images/web-development.png",
+        imageAlt: "Web Development Course Illustration Graphic",
+        tags: ["60+ Hours", "12+ Projects", "Job Guarantee"],
+        topics: [
+            "Advance React Hooks & Context API",
+            "Backend with Node.js & Microservices",
+            "AWS Cloud Infrastructure & CI/CD",
+            "SQL & NoSQL Database Optimization"
+        ],
+        achievements: [
+            { label: "Achieve", detail: "Build 10+ Projects" },
+            { label: "Achieve", detail: "Create Industry Portfolio" },
+            { label: "Achieve", detail: "Learn Latest Tools" },
+            { label: "Achieve", detail: "Become Interview Ready" }
+        ]
+    }
+];
+
+let activeIndex = 0;
+let autoSlider;
+
+const section = document.querySelector("#bc-section");
+
+if (!section) return;
+
+const leftCard = section.querySelector("#bcLeftCard");
+const topicsGrid = section.querySelector("#bcTopics");
+const imgContainer = section.querySelector("#bcImageContainer");
+const titleContainer = section.querySelector("#bcTitle");
+const descContainer = section.querySelector("#bcDescription");
+const tagsContainer = section.querySelector("#bcTags");
+const phasesContainer = section.querySelector("#bcPhases");
+const boxHeadingContainer = section.querySelector("#bcBoxHeading");
+
+function generateLayout() {
+    renderAchievementItems();
+    updateSpotlightDisplay(false);
+}
+
+function renderAchievementItems() {
+
+    phasesContainer.innerHTML = "";
+
+    const currentData = courseStates[activeIndex];
+
+    boxHeadingContainer.textContent = currentData.boxHeading;
+
+    currentData.achievements.forEach((item) => {
+
+        const card = document.createElement("div");
+
+        card.className = "bc-phase-card";
+
+        card.innerHTML = `
+            <div class="bc-phase-info">
+                <span class="bc-phase-number">${item.label}</span>
+                <span class="bc-phase-title">
+                    <span class="bc-checkmark">&#10003;</span>
+                    ${item.detail}
+                </span>
+            </div>
+            <div class="bc-phase-icon">&lt;/&gt;</div>
+        `;
+
+        card.addEventListener("click", () => {
+
+            phasesContainer.querySelectorAll(".bc-phase-card").forEach(c => {
+                c.classList.remove("active");
+            });
+
+            card.classList.add("active");
+
+            activeIndex = (activeIndex + 1) % courseStates.length;
+
+            updateSpotlightDisplay(true);
+
+            restartAutoSlider();
+
+        });
+
+        phasesContainer.appendChild(card);
+
+    });
+
+}
+
+function updateSpotlightDisplay(animate = false) {
+
+    const data = courseStates[activeIndex];
+
+    if (animate) {
+        leftCard.classList.add("fade-out");
+        topicsGrid.classList.add("fade-out");
+    }
+
+    setTimeout(() => {
+
+        titleContainer.textContent = data.title;
+        descContainer.textContent = data.description;
+
+        imgContainer.innerHTML = `
+            <img src="${data.imageSrc}" alt="${data.imageAlt}">
+        `;
+
+        tagsContainer.innerHTML = "";
+
+        data.tags.forEach(tag => {
+
+            const span = document.createElement("span");
+
+            span.className = "bc-tag";
+            span.textContent = tag;
+
+            tagsContainer.appendChild(span);
+
+        });
+
+        topicsGrid.innerHTML = "";
+
+        data.topics.forEach(topic => {
+
+            const badge = document.createElement("div");
+
+            badge.className = "bc-topic-badge";
+            badge.textContent = topic;
+
+            topicsGrid.appendChild(badge);
+
+        });
+
+        renderAchievementItems();
+
+        if (animate) {
+            leftCard.classList.remove("fade-out");
+            topicsGrid.classList.remove("fade-out");
+        }
+
+    }, animate ? 250 : 0);
+
+}
+
+function startAutoSlider() {
+
+    autoSlider = setInterval(() => {
+
+        activeIndex = (activeIndex + 1) % courseStates.length;
+
+        updateSpotlightDisplay(true);
+
+    }, 5000);
+
+}
+
+function restartAutoSlider() {
+
+    clearInterval(autoSlider);
+
+    startAutoSlider();
+
+}
+
+generateLayout();
+startAutoSlider();
+
+})();
+//OUR BOOTCAMP END
+
+
+//=================================rOADMAP============================================================
+/* ===========================================
+   ROADMAP SCROLL REVEAL
+=========================================== */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+
+(entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+},
+
+{
+
+    threshold: 0.15
+
+});
+
+revealElements.forEach((element) => {
+
+    observer.observe(element);
+
+});
+
+
+/* ===========================================
+   OPTIONAL IMAGE PARALLAX
+   (Uncomment if you want a subtle effect)
+=========================================== */
+
+/*
+
+const images = document.querySelectorAll(".image-wrapper");
+
+window.addEventListener("mousemove", (e) => {
+
+    let x = (e.clientX / window.innerWidth - 0.5) * 8;
+    let y = (e.clientY / window.innerHeight - 0.5) * 8;
+
+    images.forEach((img) => {
+
+        img.style.transform = `translate(${x}px, ${y}px)`;
+
+    });
+
+});
+
+*/
+
+
+/* ===========================================
+   OPTIONAL ACTIVE SECTION
+=========================================== */
+
+/*
+
+window.addEventListener("scroll", () => {
+
+    document.querySelectorAll(".roadmap-item").forEach(item => {
+
+        const rect = item.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight * .55){
+
+            item.classList.add("active-card");
+
+        }
+
+    });
+
+});
+
+*/
 
 // ================================Testimonial =================================
 // ===============================
@@ -216,19 +585,19 @@ const testimonials = [
 {
 name: "Amit Pandey",
 role: "Microsoft - 52 LPA",
-image: "/images/Profile (4).png",
+image: "/assets/images/Profile (4).png",
 review: "BAOIAM’s mentorship, projects, and placement support helped me transform my career and crack Microsoft at 52 LPA."
 },
 {
 name: "Akhil Padi",
 role: "Quality Engineer - 18 LPA",
-image: "/images/Profile (3).png",
+image: "/assets/images/Profile (3).png",
 review: "The hands-on projects and personalized guidance at BAOIAM helped me get placed as a Quality Engineer at 18 LPA."
 },
 {
 name: "Isha Vardhan",
 role: "Software Developer - 5 LPA",
-image: "/images/Profile (1).png",
+image: "/assets/images/Profile (1).png",
 review: "Thanks to BAOIAM's structured curriculum and expert interview preparation, I gained the confidence to land my Software Developer role."
 }
 ];
