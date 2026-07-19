@@ -1,0 +1,524 @@
+/*======================================================
+                    GLOBAL CSS
+======================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f8f8;
+    overflow-x: hidden;
+}
+
+/*======================================================
+                SECTION ANIMATION
+======================================================*/
+
+section {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/*======================================================
+                    GALLERY
+======================================================*/
+
+.gallery-card {
+    border-radius: 28px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all .5s ease;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    transition: transform .6s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,.18);
+}
+ /*university*/
+ /* ==========================
+   UNIVERSITY SECTION
+========================== */
+
+.university{
+
+    padding:80px 0;
+
+    margin-top:60px;
+
+    background:#fff;
+
+    padding:80px 0;
+
+}
+
+.university .section-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.university .section-heading h1{
+    font-size:52px;
+    font-weight:700;
+    color:#000000;
+}
+
+.university .section-heading span{
+    color:#ff6b00;
+}
+
+.university .section-heading p{
+    width:650px;
+    max-width:90%;
+    margin:18px auto;
+    color:#666;
+    font-size:17px;
+    line-height:28px;
+}
+
+
+/* ==========================
+   UNIVERSITY LOGO SLIDER
+========================== */
+
+.logo-slider{
+
+    width:100%;
+
+    overflow:hidden;
+
+    margin:40px auto;
+
+    position:relative;
+
+}
+
+.logo-track{
+
+    display:flex;
+
+    align-items:center;
+
+    gap: 70px;
+
+    width:max-content;
+
+    animation:logoScroll 20s linear infinite;
+}
+
+.logo-track img{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    background:transparent;
+
+    transition:0.5s ease;
+
+}
+
+.logo-track img:hover{
+
+    transform:scale(1.1);
+
+}
+
+ .logo-slider:hover .logo-track{
+
+    animation-play-state:paused;
+
+}
+@keyframes logoScroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/* Scrollbar for University */
+
+.logo-track::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.logo-track::-webkit-scrollbar-track{
+
+    background:#eeeeee;
+
+    border-radius:10px;
+
+}
+
+.logo-track::-webkit-scrollbar-thumb{
+
+    background:#ff6600;
+
+    border-radius:10px;
+
+}
+
+.logo-track::-webkit-scrollbar-thumb:hover{
+
+    background:#e65c00;
+
+}
+
+.logo-track img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:10px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    flex-shrink:0;
+
+}
+
+.logo-track img:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+}
+.logo-track,
+.company-track{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+}
+
+.logo-track img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    background:transparent;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+    transition:0.5s ease;
+
+    cursor:pointer;
+
+}
+
+.company-track img{
+
+    width:160px;
+    height:70px;
+
+    object-fit:contain;
+
+    background:transparent;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+    transition:0.3s ease;
+
+    cursor:pointer;
+
+}
+
+.logo-track img:hover,
+.company-track img:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+}
+
+/*network*/
+/*============ GOOGLE FONT ============*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+}
+
+/*============ SECTION ============*/
+
+.ecosystem{
+
+    padding:90px 20px;
+    background:#f5f5f5;
+}
+
+.container{
+
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+/*============ HEADING ============*/
+
+h2{
+
+    font-size:58px;
+    font-weight:800;
+    color:#111;
+    line-height:1.15;
+}
+
+h2 span{
+
+    display:block;
+    color:#ff6b00;
+}
+
+/*============ PARAGRAPH ============*/
+
+p{
+
+    margin:22px auto 60px;
+    max-width:700px;
+
+    color:#555;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/*============ LOGO SLIDER ============*/
+
+.logo-slider{
+
+    overflow:hidden;
+    position:relative;
+}
+
+.logo-track{
+
+    display:flex;
+    align-items:center;
+    gap:80px;
+
+    width:max-content;
+
+    animation:scroll 24s linear infinite;
+}
+
+.logo-slider:hover .logo-track{
+
+    animation-play-state:paused;
+}
+
+.logo-item{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-width:150px;
+    height:80px;
+
+    transition:.4s;
+}
+
+.logo-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    transition:.4s;
+}
+
+.logo-item:hover{
+
+    transform:translateY(-8px);
+}
+
+.logo-item:hover img{
+
+    transform:scale(1.08);
+}
+
+/*============ ANIMATION ============*/
+
+@keyframes scroll{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(-50%);
+
+}
+
+}
+
+/*============ RESPONSIVE ============*/
+
+@media(max-width:992px){
+
+h2{
+
+font-size:45px;
+
+}
+
+p{
+
+font-size:18px;
+
+}
+
+.logo-track{
+
+gap:50px;
+
+}
+
+.logo-item{
+
+min-width:130px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ecosystem{
+
+padding:70px 15px;
+
+}
+
+h2{
+
+font-size:36px;
+
+}
+
+p{
+
+font-size:16px;
+
+margin-bottom:40px;
+
+}
+
+.logo-track{
+
+gap:35px;
+
+}
+
+.logo-item{
+
+min-width:110px;
+height:70px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+h2{
+
+font-size:30px;
+
+}
+
+.logo-track{
+
+gap:25px;
+
+}
+
+.logo-item{
+
+min-width:90px;
+height:60px;
+
+}
+
+}
