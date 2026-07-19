@@ -1,3 +1,6 @@
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//OUR BOOCAMP SECTION
 (() => {
 
 const courseStates = [
@@ -6,7 +9,7 @@ const courseStates = [
         title: "Entrepreneurship & Business Mastery",
         boxHeading: "Curriculum Breakdown",
         description: "Master entrepreneurship with modern business strategy, startup execution, growth marketing, financial planning, and scalable business systems.",
-        imageSrc: "entrepreneurship.png",
+        imageSrc: "/assets/images/entrepreneurship.png",
         imageAlt: "Entrepreneurship Course Illustration Graphic",
         tags: ["100+ Hours", "15+ Projects", "Job Guarantee"],
         topics: [
@@ -27,7 +30,7 @@ const courseStates = [
         title: "Full Stack Web Engineering",
         boxHeading: "By the end of this bootcamp you'll:",
         description: "Master the modern MERN stack with advanced architecture, cloud deployment, and system design patterns.",
-        imageSrc: "web-development.png",
+        imageSrc: "/assets/images/web-development.png",
         imageAlt: "Web Development Course Illustration Graphic",
         tags: ["60+ Hours", "12+ Projects", "Job Guarantee"],
         topics: [
@@ -46,6 +49,7 @@ const courseStates = [
 ];
 
 let activeIndex = 0;
+let autoSlider;
 
 const section = document.querySelector("#bc-section");
 
@@ -73,11 +77,11 @@ function renderAchievementItems() {
 
     boxHeadingContainer.textContent = currentData.boxHeading;
 
-    currentData.achievements.forEach((item, index) => {
+    currentData.achievements.forEach((item) => {
 
         const card = document.createElement("div");
 
-        card.className = `bc-phase-card ${index === 2 ? "active" : ""}`;
+        card.className = "bc-phase-card";
 
         card.innerHTML = `
             <div class="bc-phase-info">
@@ -87,13 +91,23 @@ function renderAchievementItems() {
                     ${item.detail}
                 </span>
             </div>
-
             <div class="bc-phase-icon">&lt;/&gt;</div>
         `;
 
         card.addEventListener("click", () => {
-            activeIndex = activeIndex === 0 ? 1 : 0;
+
+            phasesContainer.querySelectorAll(".bc-phase-card").forEach(c => {
+                c.classList.remove("active");
+            });
+
+            card.classList.add("active");
+
+            activeIndex = (activeIndex + 1) % courseStates.length;
+
             updateSpotlightDisplay(true);
+
+            restartAutoSlider();
+
         });
 
         phasesContainer.appendChild(card);
@@ -116,15 +130,19 @@ function updateSpotlightDisplay(animate = false) {
         titleContainer.textContent = data.title;
         descContainer.textContent = data.description;
 
-        imgContainer.innerHTML = `<img src="${data.imageSrc}" alt="${data.imageAlt}">`;
+        imgContainer.innerHTML = `
+            <img src="${data.imageSrc}" alt="${data.imageAlt}">
+        `;
 
         tagsContainer.innerHTML = "";
 
         data.tags.forEach(tag => {
 
             const span = document.createElement("span");
+
             span.className = "bc-tag";
             span.textContent = tag;
+
             tagsContainer.appendChild(span);
 
         });
@@ -134,8 +152,10 @@ function updateSpotlightDisplay(animate = false) {
         data.topics.forEach(topic => {
 
             const badge = document.createElement("div");
+
             badge.className = "bc-topic-badge";
             badge.textContent = topic;
+
             topicsGrid.appendChild(badge);
 
         });
@@ -148,11 +168,35 @@ function updateSpotlightDisplay(animate = false) {
         }
 
     }, animate ? 250 : 0);
+
+}
+
+function startAutoSlider() {
+
+    autoSlider = setInterval(() => {
+
+        activeIndex = (activeIndex + 1) % courseStates.length;
+
+        updateSpotlightDisplay(true);
+
+    }, 5000);
+
+}
+
+function restartAutoSlider() {
+
+    clearInterval(autoSlider);
+
+    startAutoSlider();
+
 }
 
 generateLayout();
+startAutoSlider();
 
 })();
+//OUR BOOTCAMP END
+
 
 const trigger   = document.getElementById('ksTrigger');
   const dropdown  = document.getElementById('ksDropdown');
