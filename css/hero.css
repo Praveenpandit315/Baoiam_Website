@@ -605,7 +605,7 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
@@ -973,7 +973,7 @@ body {
 
 @media (min-width: 1024px) {
   .hero-blob {
-    width: 380px;
+    width: 360px;
   }
 }
 
