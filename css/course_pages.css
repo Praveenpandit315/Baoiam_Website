@@ -1,0 +1,1170 @@
+/* ==========================================================================
+   input.css — This is the ONLY file that uses Tailwind utility classes.
+   We write them here with @apply and give each one a plain, descriptive
+   name starting with "course_" so they're easy to spot in the HTML.
+
+   To rebuild css/course_page.css after editing this file, run:
+
+       npx tailwindcss -i css/input.css -o css/course_page.css
+
+   course_page.html and course_page.js never use a Tailwind utility class
+   directly — they only use the course_... names defined below.
+   ========================================================================== */
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/* ! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com */
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+/* page wrapper */
+
+.course_wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1420px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* "AI-Ready Careers Program" heading + subheading */
+
+.course_heading {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .course_heading {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* wraps "Our Courses" text so the sparkle icon can sit above-right of it */
+
+.course_heading_row {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* the 3-line sparkle icon next to "Courses" */
+
+.course_heading_sparkle {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .course_heading_sparkle {
+    top: -0.5rem;
+    right: -1.5rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+/* outer cream box */
+
+.course_panel {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .course_panel {
+    padding: 2.5rem;
+  }
+}
+
+/* row of tab buttons */
+
+.course_tabs {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* icon + title row inside the left card */
+
+.course_row_top {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* the 3 stat boxes */
+
+.course_stats {
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* wrapping row of technology tags */
+
+.course_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+/* text part of the bottom banner (so it grows to fill space) */
+
+.course_cta_text {
+  flex: 1 1 0%;
+}
+
+.block {
+  display: block;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Color variables used everywhere below                                 */
+
+/* ---------------------------------------------------------------------- */
+
+:root{
+  --orange:      #FF6600;
+  /* primary orange (active tab / accents) */
+  --orange-2:    #FF8534;
+  /* icon badge gradient top */
+  --orange-soft: #FFE1CC;
+  /* number badge / cta bg */
+  --bg-cream:    #FDF2EB;
+  /* outer panel background */
+  --bg-card:     #FDF7F2;
+  /* left card background */
+  --navy:        #0c121e;
+  /* headings */
+  --gray:        #2d323a;
+  /* body copy */
+  --gray-light:  #6B7280;
+  /* meta / labels */
+  --stroke:      #F0C9A8;
+  /* border color used on cream */
+}
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background: #fff;
+}
+
+.course_brand{
+  color: var(--orange);
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Layout classes — these replace the Tailwind classes that used to sit   */
+
+/* directly in the HTML/JS. Each one is just a shortcut for a group of    */
+
+/* Tailwind utilities.                                                    */
+
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+
+/* Outer panel background                                                 */
+
+/* ---------------------------------------------------------------------- */
+
+.course_panel{
+  background: linear-gradient(180deg, var(--bg-cream) 0%, #fffaf6 100%);
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.25);
+}
+
+/* Decorative dotted corner circles used inside both cards */
+
+.course_dots{
+  position: absolute;
+  background-image: radial-gradient(circle, rgba(239,91,4,0.35) 1.6px, transparent 1.6px);
+  background-size: 14px 14px;
+  opacity: 0.7;
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Tabs                                                                    */
+
+/* ---------------------------------------------------------------------- */
+
+.course_tab{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #fff;
+  color: #111827;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 13px 24px;
+  font-size: 14.5px;
+  font-weight: 600;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 140, 66, 0.25);
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+
+.course_tab i:first-child{
+  font-size: 14px;
+}
+
+.course_tab:hover{
+  background: #fff7f2;
+}
+
+.course_tab_active{
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 10px 20px -8px rgba(239,91,4,0.55);
+}
+
+/* Auto-rotate progress underline drawn inside the active tab */
+
+.course_tab_line{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: rgba(255,255,255,0.85);
+  border-radius: 3px;
+}
+
+.course_tab_active .course_tab_line_running{
+  animation: courseFillLine var(--rotate-duration, 7.5s) linear forwards;
+}
+
+@keyframes courseFillLine{
+  from{
+    width: 0%;
+  }
+
+  to{
+    width: 100%;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Course blocks — only one is visible at a time                         */
+
+/* ---------------------------------------------------------------------- */
+
+.course_block{
+  display: none;
+  animation: courseFadeIn .35s ease both;
+}
+
+.course_block.course_block_active {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .course_block.course_block_active {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@keyframes courseFadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Left card — course overview                                           */
+
+/* ---------------------------------------------------------------------- */
+
+.course_left_card{
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 42px;
+  border: 1px solid var(--stroke);
+  box-shadow: 6px 8px 20px rgba(16, 24, 40, 0.15);
+}
+
+.course_icon{
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--orange-2), var(--orange));
+  box-shadow: 0 10px 22px -8px rgba(239,91,4,0.55);
+}
+
+.course_title{
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+.course_desc{
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 430px;
+  margin-bottom: 24px;
+}
+
+/* single stat box */
+
+.course_stat{
+  background: #fff;
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.course_stat_value{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.course_stat_value i{
+  font-size: 25px;
+}
+
+.course_stat_label{
+  font-size: 14px;
+  color: var(--gray-light);
+  margin-top: 5px;
+}
+
+.course_subtitle{
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+/* single technology pill */
+
+.course_tag{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1.5px solid var(--stroke);
+  border-radius: 9999px;
+  min-width: 145px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f2937;
+  transition: all .2s ease;
+}
+
+.course_tag i{
+  color: var(--orange);
+  font-size: 15px;
+}
+
+.course_tag:hover{
+  border-color: var(--orange);
+  background: #fff5ee;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------------- */
+
+/* Right card — learning modules                                         */
+
+/* ---------------------------------------------------------------------- */
+
+.course_right_card{
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 6px 8px 20px rgba(16, 24, 40, 0.15);
+}
+
+.course_module_top{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.course_module_circle{
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: var(--orange);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.course_right_card h3{
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.course_module_info{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 56px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--gray-light);
+}
+
+.course_module_sep{
+  color: #d1d5db;
+}
+
+/* single numbered module row */
+
+.course_module_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #eae8e8;
+  box-shadow: 0 4px 14px -6px rgba(17, 25, 42, 0.1);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  transition: all .2s ease;
+}
+
+.course_module_item:hover{
+  border-color: var(--orange);
+  box-shadow: 0 6px 18px -6px rgba(239, 91, 4, 0.18);
+  background: #fff9f5;
+  transform: translateX(2px);
+}
+
+/* left side: number + name grouped together */
+
+.course_module_left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course_module_num{
+  min-width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.course_module_name{
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* right side: clock icon + duration */
+
+.course_module_time{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-light);
+  flex-shrink: 0;
+}
+
+.course_module_time i{
+  font-size: 12.5px;
+}
+
+/* bottom call-to-action banner */
+
+.course_cta{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(90deg, var(--orange-soft), #FCEFE8);
+  border-radius: 14px;
+  padding: 14px 16px;
+  text-align: left;
+  margin-top: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.course_cta_icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: var(--orange);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.course_cta_title{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.course_cta_desc{
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.course_cta_arrow{
+  color: var(--orange);
+  font-size: 16px;
+}
+
+/* "Explore More" button — sits below the technology tags in the left card */
+
+.course_explore_btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--orange-2), var(--orange));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -8px rgba(239,91,4,0.55);
+  transition: all .2s ease;
+}
+
+.course_explore_btn i{
+  font-size: 13px;
+  transition: transform .2s ease;
+}
+
+.course_explore_btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px -8px rgba(239,91,4,0.65);
+}
+
+.course_explore_btn:hover i{
+  transform: translateX(3px);
+}
