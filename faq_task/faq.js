@@ -6,12 +6,16 @@ faqs.forEach((item) => {
 
     question.addEventListener("click", () => {
 
-        item.classList.toggle("active");
+        const isActive = item.classList.contains("faq-active");
 
-        if (item.classList.contains("active")) {
-            button.innerHTML = "−";
-        } else {
-            button.innerHTML = "+";
+        faqs.forEach((faq) => {
+            faq.classList.remove("faq-active");
+            faq.querySelector("button").textContent = "+";
+        });
+
+        if (!isActive) {
+            item.classList.add("faq-active");
+            button.textContent = "−";
         }
 
     });
