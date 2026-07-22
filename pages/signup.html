@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAOIAM Authentication</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- ===================== SIGNUP PAGE ====================== -->
+
+        <section class="screen active" id="signup">
+
+            <div class="card">
+
+                <img src="/assets/images/baoiam.png" class="logo">
+
+                <h1>Create Your Account</h1>
+
+                <p>Sign up to start your learning journey</p>
+
+                <div class="input-box">
+
+                    <img src="/assets/images/gmail.png" class="input-icon" alt="Email">
+
+                    <input type="email" id="email" placeholder="Email Address">
+
+                    <button id="nextArrow" class="arrow-btn">
+                        &#8594;
+                    </button>
+
+                </div>
+
+                <div class="or">
+                    <span>OR</span>
+                </div>
+
+                <button class="google-btn">
+                    <img src="/assets/images/google.png">
+                    Continue with Google
+                </button>
+
+                <button class="google-btn">
+                    <img src="/assets/images/gmail.png">
+                    Continue with Email
+                </button>
+
+                <div class="bottom-text">
+                    Already have an account?
+                    <span>Log In</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= OTP PAGE ================= -->
+
+        <section class="screen" id="otp">
+
+            <div class="card">
+
+                <img src="/assets/images/phone.png" class="top-image">
+
+                <h1>Enter OTP!</h1>
+
+                <p>
+                    We've sent an OTP to
+                    <strong id="otpEmail"></strong>
+                </p>
+
+                <div class="otp-box">
+
+                    <input maxlength="1">
+                    <input maxlength="1">
+                    <input maxlength="1">
+                    <input maxlength="1">
+                    <input maxlength="1">
+                    <input maxlength="1">
+
+                </div>
+
+                <div class="resend">
+
+                    Didn't receive OTP?
+
+                    <span>Resend</span>
+
+                    in
+
+                    <strong id="timer">
+                        00:28
+                    </strong>
+
+                </div>
+
+                <button class="orange-btn next-btn" data-next="profile">
+
+                    Verify OTP
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= PROFILE PAGE ================= -->
+
+        <section class="screen" id="profile">
+
+            <div class="card">
+
+                <img src="/assets/images/note.png" class="top-image">
+
+                <h1>Complete your Profile</h1>
+
+                <p>Let's get to know you better</p>
+
+                <div class="input-box">
+
+                    <img class="profile-btn" src="/assets/images/profile.png">
+
+                    <input type="text" placeholder="Full Name">
+
+                </div>
+
+                <button class="orange-btn next-btn" data-next="details">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= DETAILS PAGE ================= -->
+
+        <section class="screen" id="details">
+
+            <div class="card large">
+
+                <h1>A Few more details</h1>
+
+                <p>
+                    Help us personalize your experience
+                </p>
+
+                <div class="option-card">
+
+                    <h3>Year of Graduation</h3>
+
+                    <label>
+
+                        <input type="radio" checked name="year">
+
+                        Fresher
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="year">
+
+                        2025
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="year">
+
+                        2024
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="year">
+
+                        2023 or Before
+
+                    </label>
+
+                </div>
+
+                <div class="option-card">
+
+                    <h3>Current Status</h3>
+
+                    <label>
+
+                        <input type="radio" checked name="status">
+
+                        I'm looking for a Job
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="status">
+
+                        Preparing for Higher Studies
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="status">
+
+                        Exploring Opportunities
+
+                    </label>
+
+                    <label>
+
+                        <input type="radio" name="status">
+
+                        Just Exploring
+
+                    </label>
+
+                </div>
+
+                <button class="orange-btn next-btn" data-next="courses">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+        <!-- ================= COURSES PAGE ================= -->
+
+        <section class="screen" id="courses">
+
+            <div class="card large">
+
+                <h1>Choose Your Career Path</h1>
+
+                <p>Select at least one courses to continue.</p>
+
+                <div class="course-list">
+
+                    <label class="course-item">
+                        <input type="checkbox" checked>
+
+                        <img src="/assets/images/web.png" alt="">
+
+                        <div class="course-info">
+                            <h3>Web Development</h3>
+                            <p>Master the skills to build modern websites</p>
+                        </div>
+                    </label>
+
+                    <label class="course-item">
+                        <input type="checkbox">
+
+                        <img src="/assets/images/digital.png" alt="">
+
+                        <div class="course-info">
+                            <h3>Digital Marketing</h3>
+                            <p>Establish your own empire</p>
+                        </div>
+                    </label>
+
+                    <label class="course-item">
+                        <input type="checkbox">
+
+                        <img src="/assets/images/data.png" alt="">
+
+                        <div class="course-info">
+                            <h3>Data Analysis</h3>
+                            <p>Analysis create & build your research of data</p>
+                        </div>
+                    </label>
+
+                    <label class="course-item">
+                        <input type="checkbox">
+
+                        <img src="/assets/images/career.png" alt="">
+
+                        <div class="course-info">
+                            <h3>Career Accelerator</h3>
+                            <p>Make your career boosts with us</p>
+                        </div>
+                    </label>
+
+                </div>
+
+                <button class="orange-btn next-btn" data-next="welcome">
+
+                    Continue
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= WELCOME PAGE ================= -->
+
+        <section class="screen" id="welcome">
+
+    <div class="card welcome-card">
+
+        <img src="/assets/images/rocket.png" class="welcome-img" alt="Rocket">
+
+        <h1>Welcome to BAOIAM!</h1>
+
+        <p class="verify-text">
+            Your email has been verified successfully
+        </p>
+
+        <p class="learning-text">
+            Let's start learning!
+        </p>
+
+        <button class="orange-btn dashboard-btn">
+            Go to Dashboard
+        </button>
+
+        <button class="explore-btn">
+            Explore Courses
+        </button>
+
+    </div>
+
+</section>
+
+    </div>
+
+    <script src="/js/Signup.js"></script>
+
+</body>
+
+</html>
