@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  body {
+    @apply font-inter text-brand-dark;
+  }
+}
+
+@layer components {
+  /* ---------- Section wrapper ---------- */
+  .refer_hero_section {
+    @apply w-full bg-white overflow-hidden;
+  }
+
+  .refer_hero_container {
+    @apply max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20 flex flex-col md:flex-row items-center gap-12 md:gap-6;
+  }
+
+  /* ---------- Left content ---------- */
+  .refer_hero_left {
+    @apply w-full md:w-1/2 flex flex-col items-start;
+  }
+
+  .refer_hero_title {
+    @apply text-[54px] sm:text-5xl leading-[1.55] sm:leading-none font-extrabold text-black mb-6;
+  }
+
+  .refer_hero_title_accent {
+    @apply text-brand-orange;
+  }
+
+  .refer_hero_desc {
+    @apply text-base sm:text-lg max-w-md mb-8;
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity, 0.5));
+  }
+
+  .refer_hero_cta {
+    @apply inline-block text-white font-semibold text-base rounded-md px-8 py-4 mb-10 shadow-md shadow-orange-200 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-300 active:translate-y-0 active:shadow-md cursor-pointer border-none;
+    background: linear-gradient(90deg, #FB7600 0%, #FA800F 65%, #F9881B 93%, #F88E25 100%);
+  }
+
+  /* ---------- Avatar / referrer count row (hoverable "card") ---------- */
+  .refer_hero_stats_card {
+    @apply flex items-center gap-4 -ml-3 rounded-xl px-3 py-2 cursor-default transition-all duration-200 ease-out;
+  }
+
+  .refer_hero_avatar_group {
+    @apply flex items-center;
+  }
+
+  .refer_hero_avatar {
+    @apply relative w-10 h-10 rounded-full border-2 border-white object-cover -ml-3 first:ml-0 shadow-sm transition-transform duration-200 ease-out hover:z-10 hover:scale-125 hover:-translate-y-1;
+  }
+
+  .refer_hero_avatar_count {
+    @apply text-base text-gray-600;
+  }
+
+  .refer_hero_avatar_count_number {
+    @apply text-brand-orange font-bold transition-colors duration-200;
+  }
+
+  .refer_hero_stats_card:hover .refer_hero_avatar_count_number {
+    @apply text-brand-orangeLight;
+  }
+
+  /* ---------- Right illustration ---------- */
+  .refer_hero_right {
+  @apply w-full md:w-1/2 flex items-center justify-center relative;
+}
+
+.refer_hero_illustration {
+  @apply relative w-full max-w-[480px] h-auto select-none transition-transform duration-300 ease-out hover:scale-[1.02];
+}
+}
