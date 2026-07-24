@@ -632,3 +632,24 @@ function validatePhone() {
     // Clear input after successful submission
     document.getElementById("phone").value = "";
 }
+//GOT QUESTIONS SECTION
+document.addEventListener("DOMContentLoaded", () => {
+  const gotQuestionsCards = document.querySelectorAll(".got-questions-card");
+  const gotQuestionsButtons = document.querySelectorAll(".got-questions-btn");
+
+  gotQuestionsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const currentCard = button.parentElement;
+
+      // Close all other cards
+      gotQuestionsCards.forEach((card) => {
+        if (card !== currentCard) {
+          card.classList.remove("active");
+        }
+      });
+
+      // Toggle the clicked card
+      currentCard.classList.toggle("active");
+    });
+  });
+});
